@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 8</title>
+     <!--LINKS START-->
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <!--AOS Link-->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+     <!--Bootstrap Icon link-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+      <!-- Bootstap CDN Links -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="nav.css">
+     <link rel="stylesheet" href="index.css">
+     <link rel="stylesheet" href="footer.css">
+     <link rel="stylesheet" href="about-us.html">
+     <link rel="stylesheet" href="index.html">
+     <link class="stylesheet" href="Y7.html">
+     <link class="stylesheet" href="Y8.html">
+     <link class="stylesheet" href="Y9.html">
+     <link rel="stylesheet" href="contact-us.css">
+     <link rel="icon" type="image/png" href="./image/logo.png">
+     <!--LINKS END-->
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lobster&family=Outfit:wght@100..900&family=Spicy+Rice&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap');
+       *{
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+       }
+       .website-name {
+        font-family: "Spicy Rice", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size:25px;
+        color:rgb(255, 175, 45) ;
+       }
+        #stem{
+            display: none;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: white;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Make sure the body takes up the full height */
+        }
+
+        header {
+            background-color: #cce6ff;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+    position: relative; /* or absolute */
+    right: 650px; /* Moves the icon 10px to the right */
+    top: 5px;   /* Moves the icon 5px down */
+    size: 10px;
+}
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tab_box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 2px solid rgba(229, 229, 229);
+            position: relative;
+        }
+
+        .tab_box .tab_btn {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background: none;
+            border: none;
+            padding: 18px;
+            cursor: pointer;
+        }
+
+        .tab_box .tab_btn.active {
+            color: #ffffff;
+        }
+
+        .line {
+            position: absolute;
+            top: 62px;
+            left: 17px;
+            width: 90px;
+            height: 5px;
+            background-color: #f0eff7;
+            border-radius: 10px;
+            transition: all .3s ease-in-out;
+        }
+
+        .wrapper {
+            width: 70%;
+        }
+
+        img {
+            max-width: 220px;
+            float: left;
+            border: 3px soild floralwhite;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .text-box {
+            color: black;
+        }
+
+        .text-box h2 {
+            font-size: 42px;
+        }
+
+        .text-box p {
+            font-size: 16px;
+        }
+
+        .nav-pills .nav-link {
+            color: black;
+        }
+
+        .nav-pills .nav-link.active {
+            color: black;
+        }
+
+        .nav-pills .nav-link:hover {
+            background-color: #80bfff;
+        }
+
+        .tab-content {
+            padding-top: 20px;
+        }
+
+        #interactive {
+            margin: 40px 20px;
+        }
+
+        #interactive h2 {
+            text-align: center;
+            color: #6a0dad;
+            margin-bottom: 30px;
+        }
+
+        .interactive-content {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .interactive-box {
+            flex: 1 1 300px;
+            background: #f0f8ff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .interactive-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .interactive-box button {
+            background: #80bfff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .interactive-box button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px #80bfff;
+        }
+
+        .tab_box nav .nav-pills {
+            color: #80bfff;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="icon-container" onclick="location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left icon" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+            </svg>
+        </div>
+        <h1>Year 8</h1>
+        <div class="container mt-5">
+            <div class="tab_box nav nav-pills justify-content-center flex-wrap" style="color: #80bfff;">
+                <button class="tab_btn active" href="#bio" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="none"'>Biology</button>
+                <button class="tab_btn" href="#chem" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="none"'>Chemistry</button>
+                <button class="tab_btn" href="#physic" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="none"'>Physics</button>
+                <button class="tab_btn" href="#stem" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="inline-block"'>STEM ACTIVITY</button>
+            </div>
+        </div>
+    </header>
+    <div class="container mt-5">
+        <div class="tab-content">
+            <div class="tab-pane active" id="bio">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="flex-column nav">
+                            <li class="nav-item"><a href="#bt1" class="nav-link active" data-bs-toggle="tab">Cells and Specialized Cells</a></li>
+                            <li class="nav-item"><a href="#bt2" class="nav-link" data-bs-toggle="tab">Respiration</a></li>
+                            <li class="nav-item"><a href="#bt3" class="nav-link" data-bs-toggle="tab">Photosynthesis in Plants</a></li>
+                            <li class="nav-item"><a href="#bt4" class="nav-link" data-bs-toggle="tab">Human digestion</a></li>
+                            <li class="nav-item"><a href="#bt5" class="nav-link" data-bs-toggle="tab">Reproduction in Plants and Animals</a></li>
+                            <li class="nav-item"><a href="#bt6" class="nav-link" data-bs-toggle="tab">Microorganisms and Disease</a></li>
+                            <li class="nav-item"><a href="#bt7" class="nav-link" data-bs-toggle="tab">Adaptation and Evolution</a></li>
+                            <li class="nav-item"><a href="#bt8" class="nav-link" data-bs-toggle="tab">Human Nervous System</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="bt1">
+                                <div class="wrapper">
+                                    <img src="image/cell-differentiation.webp" alt="CandSC" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Cells and Specialized Cells</h2>
+                                <p>Cells are the fundamental units of life, forming the building blocks of all organisms. While single-celled organisms rely on one cell to perform all necessary functions, multicellular organisms have specialized cells adapted for specific roles. For example, red blood cells in humans are designed to carry oxygen, thanks to their biconcave shape and the presence of hemoglobin. Similarly, nerve cells, or neurons, have long extensions called axons that enable the rapid transmission of electrical signals across the body. In plants, root hair cells are specialized to absorb water and minerals efficiently, increasing the surface area for uptake. Muscle cells, packed with mitochondria, generate the energy required for contraction. The specialization of cells allows tissues and organs to work together seamlessly, forming complex systems that sustain life. This division of labor ensures that organisms can grow, respond to their environment, and carry out necessary life processes.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane" id="bt2">
+                                <div class="wrapper">
+                                    <img src="image/respiration.jpg" alt="R" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Respiration</h2>
+                                <p>Respiration is the biochemical process by which organisms extract energy from organic molecules like glucose to power cellular activities. This process occurs in two forms: aerobic and anaerobic respiration. Aerobic respiration, which requires oxygen, is highly efficient and occurs in the mitochondria of cells. It breaks down glucose into carbon dioxide and water, releasing large amounts of energy in the form of ATP (adenosine triphosphate). Anaerobic respiration, on the other hand, takes place in the absence of oxygen and produces less energy. Byproducts of anaerobic respiration, such as lactic acid in animals or ethanol and carbon dioxide in plants and yeast, can have different effects depending on the organism. Regardless of the type, respiration is essential for life, providing the energy needed for processes such as cell division, active transport, and movement. Without respiration, cells would be unable to function, and life as we know it would cease to exist.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane" id="bt3">
+                                <div class="wrapper">
+                                    <img src="image/photosynthesis-y8.jpg" alt="PiP" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Photosynthesis in Plants</h2>
+                                <p>Photosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy stored in glucose. This process takes place in the chloroplasts, where the green pigment chlorophyll absorbs sunlight. Using this energy, plants combine carbon dioxide from the air and water from the soil to produce glucose and oxygen. This reaction is essential not only for the growth and energy needs of plants but also for sustaining life on Earth by providing oxygen for respiration. Photosynthesis is influenced by various factors, including light intensity, carbon dioxide levels, and temperature. Plants use the glucose produced during photosynthesis for growth, energy storage, and building structural components like cellulose. Additionally, photosynthesis forms the base of nearly all food chains, as plants serve as primary producers. This remarkable process is fundamental to life on Earth, linking the sun's energy to all living organisms.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane" id="bt4">
+                                <div class="wrapper">
+                                    <img src="image/digestive-y8.avif" alt="hD" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Human digestion</h2>
+                                <p>The human digestive system is a sophisticated network of organs that work together to break down food into nutrients that the body can absorb and utilize. Digestion begins in the mouth, where teeth chew food into smaller pieces, and enzymes in saliva start breaking down carbohydrates. The food then travels through the esophagus to the stomach, where it is mixed with gastric juices containing enzymes and hydrochloric acid to digest proteins. From the stomach, partially digested food enters the small intestine, where bile from the liver and enzymes from the pancreas further break down fats, proteins, and carbohydrates. Nutrients are absorbed through the walls of the small intestine into the bloodstream, where they are transported to cells throughout the body. Any undigested material moves into the large intestine, where water is reabsorbed, and waste is eventually excreted. This complex process ensures the body receives essential nutrients for energy, growth, and repair, supporting overall health and vitality.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane" id="bt5">
+                                <div class="wrapper">
+                                    <img src="image/animal-and-plant-reproduction.jpg" alt="RiPandA" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Reproduction in Plants and Animals</h2>
+                                <p>Reproduction is the biological process by which organisms produce offspring, ensuring the continuation of their species. In plants, sexual reproduction involves the transfer of pollen from the male anther to the female stigma, often facilitated by wind, water, or pollinators like insects. This leads to fertilization, seed development, and the growth of new plants. In animals, sexual reproduction occurs through the fusion of male and female gametes, resulting in genetic variation among offspring, which is vital for adaptation and survival. Asexual reproduction, in contrast, allows organisms to reproduce without gametes, producing genetically identical offspring. Examples include budding in hydras and vegetative propagation in plants. While sexual reproduction promotes genetic diversity, asexual reproduction offers the advantage of rapid population growth. Together, these methods ensure that plants and animals can adapt to changing environments and maintain ecological balance.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane" id="bt6">
+                                <div class="wrapper">
+                                    <img src="image/diseases.jpg" alt="MandD" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Microorganisms and Disease</h2>
+                                <p>Microorganisms, which include bacteria, viruses, fungi, and protozoa, are microscopic organisms that can be found in nearly every environment on Earth. While some microorganisms cause diseases in humans, animals, and plants, others play crucial roles in maintaining ecological balance and supporting human activities. Pathogenic microorganisms can lead to infections, such as the flu, tuberculosis, or crop blights, requiring treatment with antibiotics, antifungals, or vaccines. However, many microorganisms are beneficial. For instance, certain bacteria in the human gut aid digestion and synthesize vitamins, while others are used in the production of foods like yogurt and cheese. Microorganisms also decompose organic matter, recycle nutrients, and fix nitrogen in the soil, supporting plant growth. Understanding the roles of microorganisms is essential for addressing health challenges, advancing biotechnology, and harnessing their positive contributions to society.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane" id="bt7">
+                                <div class="wrapper">
+                                    <img src="image/adaptation.webp" alt="AandE" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Adaptation and Evolution</h2>
+                                <p>Adaptation and evolution explain how organisms survive and change over generations in response to their environments. Adaptations are traits that improve an organism's ability to survive and reproduce. These can be structural, such as the thick fur of polar bears for insulation, or behavioral, like birds migrating to warmer climates during winter. Over time, natural selection allows organisms with advantageous traits to thrive and pass these traits to their offspring. This process drives evolution, resulting in the development of new species and the incredible diversity of life on Earth. Evolution occurs due to genetic mutations, environmental pressures, and reproductive success, shaping the living world over millions of years. It provides the framework for understanding biodiversity, extinction, and the interconnectedness of all living things.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane" id="bt8">
+                                <div class="wrapper">
+                                    <img src="image/human-nervous.jpg" alt="HNS" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Human Nervous System</h2>
+                                <p>The human nervous system is a complex and highly organized network that enables the body to respond to stimuli, control voluntary and involuntary actions, and process information. It consists of two main parts: the central nervous system (CNS), comprising the brain and spinal cord, and the peripheral nervous system (PNS), which includes nerves extending throughout the body. Neurons, the basic units of the nervous system, transmit electrical signals between different parts of the body. Sensory neurons detect changes in the environment, motor neurons carry commands to muscles, and interneurons in the brain and spinal cord process information. The nervous system regulates everything from reflexes, such as pulling your hand away from a hot surface, to complex activities like learning, memory, and emotional responses. By maintaining communication within the body, the nervous system ensures survival and allows humans to interact with their surroundings in meaningful ways.</p>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="chem">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="flex-column nav">
+                            <li class="nav-item"><a href="#ct1" class="nav-link active" data-bs-toggle="tab">The Atomic Structure</a></li>
+                            <li class="nav-item"><a href="#ct2" class="nav-link" data-bs-toggle="tab">Elements, Compounds, and Mixtures</a></li>
+                            <li class="nav-item"><a href="#ct3" class="nav-link" data-bs-toggle="tab">The Periodic Table and Element Properties</a></li>
+                            <li class="nav-item"><a href="#ct4" class="nav-link" data-bs-toggle="tab">Chemical Bonding Basics</a></li>
+                            <li class="nav-item"><a href="#ct5" class="nav-link" data-bs-toggle="tab">Physical and Chemical Changes</a></li>
+                            <li class="nav-item"><a href="#ct6" class="nav-link" data-bs-toggle="tab">Rates of Reaction</a></li>
+                            <li class="nav-item"><a href="#ct7" class="nav-link" data-bs-toggle="tab">Acids, Bases, and the pH Scale</a></li>
+                            <li class="nav-item"><a href="#ct8" class="nav-link" data-bs-toggle="tab">Separation Techniques</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="ct1">
+                                <div class="wrapper">
+                                    <img src="image/atomic.webp" alt="TAS" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>The Atomic Structure</h2>
+                                <p>The atomic structure is the foundation of chemistry, describing the smallest unit of matter that retains the properties of an element. Atoms consist of three main subatomic particles: protons, neutrons, and electrons. Protons, which are positively charged, and neutrons, which have no charge, are located in the nucleus at the atom's center. Electrons, carrying a negative charge, orbit the nucleus in regions called electron shells or energy levels. The arrangement of these electrons determines an atom's chemical properties and reactivity. Atoms of the same element have the same number of protons, which defines their atomic number, while variations in the number of neutrons result in isotopes. Understanding atomic structure is crucial for explaining chemical bonding, reactions, and the behavior of matter.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct2">
+                                <div class="wrapper">
+                                    <img src="image/element.webp" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Elements, Compounds, and Mixtures</h2>
+                                <p>Elements, compounds, and mixtures are the three main forms in which matter exists. An element is a pure substance that cannot be broken down into simpler substances by chemical means; it consists of only one type of atom. Examples include oxygen, gold, and hydrogen. A compound is a substance formed when two or more elements chemically combine in fixed proportions, resulting in a substance with unique properties, such as water (H₂O) or carbon dioxide (CO₂). Mixtures, on the other hand, are combinations of two or more substances that retain their individual properties and can often be separated by physical methods. Examples include air and saltwater. While elements and compounds are pure substances with defined compositions, mixtures can vary in proportion and composition, making their study crucial for understanding material properties.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct3">
+                                <div class="wrapper">
+                                    <img src="image/y7-che-periocis.webp" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>The Periodic Table and Element Properties</h2>
+                                <p>The periodic table is a systematic arrangement of all known elements based on their atomic number, electron configuration, and recurring chemical properties. Developed by Dmitri Mendeleev, the table organizes elements into rows (periods) and columns (groups or families). Elements in the same group share similar chemical properties due to having the same number of valence electrons. For instance, Group 1 elements (alkali metals) are highly reactive, while Group 18 elements (noble gases) are largely unreactive. The periodic trends, such as increasing atomic radius, electronegativity, and ionization energy, help predict how elements will interact in chemical reactions. The periodic table is a fundamental tool for chemists, offering insights into the behavior of elements and their compounds.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct4">
+                                <div class="wrapper">
+                                    <img src="image/chemical-bonding.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Chemical Bonding Basics</h2>
+                                <p>Chemical bonding is the process by which atoms combine to form molecules or compounds, achieving stability by completing their outer electron shells. There are three main types of chemical bonds: ionic, covalent, and metallic. Ionic bonds form when atoms transfer electrons, creating charged particles called ions that are held together by electrostatic forces, as seen in sodium chloride (NaCl). Covalent bonds occur when atoms share electrons to achieve a stable configuration, such as in a water molecule (H₂O). Metallic bonds involve a "sea of electrons" surrounding positively charged metal ions, giving metals their characteristic properties like conductivity and malleability. Understanding chemical bonding is key to explaining the structure and behavior of matter.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct5">
+                                <div class="wrapper">
+                                    <img src="image/physical-chemical.webp" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Physical and Chemical Changes</h2>
+                                <p>Physical and chemical changes describe how matter transforms in different situations. A physical change alters the appearance or state of a substance without changing its chemical composition. Examples include melting ice, boiling water, or dissolving salt in water. These changes are often reversible. In contrast, a chemical change involves the formation of new substances with different properties, such as rusting iron, burning wood, or the reaction of vinegar with baking soda to produce carbon dioxide. Chemical changes often release or absorb energy and are usually irreversible. Identifying these changes is essential for understanding the processes that shape the material world.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct6">
+                                <div class="wrapper">
+                                    <img src="image/rate.png" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Rates of Reaction</h2>
+                                <p>The rate of a chemical reaction refers to how quickly reactants are converted into products. Several factors influence reaction rates, including temperature, concentration, surface area, and the presence of a catalyst. Increasing the temperature typically speeds up reactions by providing more energy for particles to collide with sufficient force. Higher concentrations of reactants increase collision frequency, while smaller particle sizes or greater surface areas enhance reaction opportunities. Catalysts, substances that accelerate reactions without being consumed, play a critical role in industrial and biological processes. Studying reaction rates is crucial for optimizing chemical production and understanding natural phenomena.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct7">
+                                <div class="wrapper">
+                                    <img src="image/base-acid.webp" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Acids, Bases, and the pH Scale</h2>
+                                <p>Acids and bases are two categories of substances with distinct properties. Acids, such as hydrochloric acid (HCl) and vinegar, have a sour taste, turn blue litmus paper red, and release hydrogen ions (H⁺) in solution. Bases, like sodium hydroxide (NaOH) and baking soda, feel slippery, turn red litmus paper blue, and release hydroxide ions (OH⁻) in solution. The pH scale measures the acidity or alkalinity of a solution, ranging from 0 (highly acidic) to 14 (highly basic), with 7 being neutral. Understanding acids, bases, and pH is critical for fields like medicine, agriculture, and environmental science, as these substances play a role in digestion, soil fertility, and water quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct8">
+                                <div class="wrapper">
+                                    <img src="image/method.webp" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Separation Techniques</h2>
+                                <p>Separation techniques are methods used to separate mixtures into their individual components based on physical properties. Common methods include filtration, which separates solids from liquids; distillation, which separates substances with different boiling points; and chromatography, which separates components based on their movement through a medium. Other techniques like centrifugation and magnetic separation exploit differences in density or magnetic properties, respectively. These techniques are widely used in laboratories, industries, and environmental studies to purify substances, analyze mixtures, and recycle materials. Understanding separation techniques is vital for advancing science and technology in various fields.</p>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="physic">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="flex-column nav">
+                            <li class="nav-item"><a href="#dt1" class="nav-link active" data-bs-toggle="tab">Forces and Newton’s Laws</a></li>
+                            <li class="nav-item"><a href="#dt2" class="nav-link" data-bs-toggle="tab">Energy Types and Conservation</a></li>
+                            <li class="nav-item"><a href="#dt3" class="nav-link" data-bs-toggle="tab">Electricity and Circuits</a></li>
+                            <li class="nav-item"><a href="#dt4" class="nav-link" data-bs-toggle="tab">Waves: Light and Sound</a></li>
+                            <li class="nav-item"><a href="#dt5" class="nav-link" data-bs-toggle="tab">Heat Transfer</a></li>
+                            <li class="nav-item"><a href="#dt6" class="nav-link" data-bs-toggle="tab">Magnetism and Electromagnetism</a></li>
+                            <li class="nav-item"><a href="#dt7" class="nav-link" data-bs-toggle="tab">The Solar System and Gravity</a></li>
+                            <li class="nav-item"><a href="#dt8" class="nav-link" data-bs-toggle="tab">Pressure in Liquids and Gases</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                        <div class="tab-pane active" id="dt1">
+                            <div class="wrapper">
+                                <img src="image/newton3rd.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Forces and Newton’s Laws</h2>
+                            <p>Forces are responsible for the movement or lack of movement of objects, and Newton’s Three Laws of Motion help explain this behavior. The First Law states that an object remains at rest or in uniform motion unless acted upon by an external force, illustrating the concept of inertia. The Second Law connects force, mass, and acceleration, showing that an object's acceleration depends on its mass and the force applied. The Third Law explains that every action has an equal and opposite reaction, evident in phenomena like a rocket's launch. Students can explore these laws through a force simulation, where altering the mass or force applied to an object visually demonstrates the principles of motion.</p>
+                        </div>
+                    </div>
+                        </div>
+
+                        <div class="tab-pane" id="dt2">
+                                <div class="wrapper">
+                                    <img src="image/type-of-energy.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Energy Types and Conservation</h2>
+                                <p>Energy exists in various forms, such as kinetic, potential, thermal, and chemical energy, and it follows the principle of conservation of energy. This principle states that energy cannot be created or destroyed but only transformed from one form to another. For instance, a roller coaster converts potential energy at its peak into kinetic energy as it descends. Understanding energy transformations helps explain the functioning of machines, ecosystems, and even daily activities. Through an energy transformation activity, students can observe energy changes in scenarios like a swinging pendulum or a roller coaster in motion, reinforcing the concept of conservation.</p>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="tab-pane" id="dt3">
+                            <div class="wrapper">
+                                <img src="image/cricuits.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Electricity and Circuits</h2>
+                            <p>Electricity flows through circuits, which consist of components such as resistors, wires, and batteries. Current is the flow of electric charge, while voltage drives the current, and resistance opposes it. Circuits can be arranged in series or parallel configurations, affecting how electricity flows and how components like bulbs function. Understanding circuits is key to many modern technologies. A circuit builder lets students design and test simple circuits, helping them visualize how current flows and how components interact, such as observing the brightness of bulbs in series versus parallel setups.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="dt4">
+                            <div class="wrapper">
+                                <img src="image/sound-wave.png" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Waves: Light and Sound</h2>
+                            <p>Light and sound waves are forms of energy that travel through different mediums. Light waves are transverse and can reflect, refract, or diffract, while sound waves are longitudinal and require a medium to travel. The properties of waves, such as amplitude, frequency, and wavelength, determine their characteristics. For instance, a higher frequency results in a higher-pitched sound, while a larger amplitude increases its volume. Similarly, light’s brightness depends on its amplitude. A wave simulator allows students to manipulate wave properties like frequency and amplitude, helping them understand the principles behind sound pitch, light brightness, and wave behavior.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="dt5">
+                            <div class="wrapper">
+                                <img src="image/heat.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Heat Transfer</h2>
+                            <p>Heat energy moves from hotter to cooler areas through conduction, convection, and radiation. Conduction involves heat transfer through direct contact, as seen when a metal spoon heats up in a hot drink. Convection occurs in fluids, where warmer areas rise and cooler areas sink, creating currents, such as in boiling water. Radiation transfers heat through electromagnetic waves, requiring no medium, as sunlight warms the Earth. Everyday applications of heat transfer range from cooking to home heating systems. An interactive heat flow model lets students observe how heat moves through different materials and scenarios, deepening their understanding of these processes.</p>
+                        </div>
+                    </div>
+                        </div>
+                        
+                        <div class="tab-pane" id="dt6">
+                            <div class="wrapper">
+                                <img src="image/electricity-spark.png" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Magnetism and Electricity</h2>
+                            <p>Magnets produce magnetic fields that attract or repel materials like iron, and electromagnets are created by running an electric current through a coil of wire. Magnetic fields are used in devices ranging from compasses to electric motors. Understanding these fields is essential for technologies like generators and transformers. Students can experiment with a virtual electromagnet by adjusting variables like current and the number of coil turns to observe changes in magnetic field strength, making the concepts of magnetism and electromagnetism more engaging and applicable to real-world devices.</p>
+                        </div>
+                    </div>
+                        </div>
+
+                        <div class="tab-pane" id="dt7">
+                            <div class="wrapper">
+                                <img src="image/solor-y8.webp" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>The Solar System and Gravity</h2>
+                            <p>The solar system consists of planets, moons, and other celestial objects held together by gravity, which is the force that pulls objects toward one another. Gravity not only keeps planets in orbit around the Sun but also affects tides, planetary motion, and the behavior of comets and asteroids. The strength of gravitational force depends on the mass of the objects and the distance between them. A gravity simulation allows students to alter the mass of objects, like Earth or the Moon, and observe how this impacts gravitational pull and orbital paths, illustrating the importance of gravity in the cosmos.</p>
+                        </div>
+                    </div>
+                        </div>
+
+                        <div class="tab-pane" id="dt8">
+                            <div class="wrapper">
+                                <img src="image/liquid-pressure.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Pressure in Liquids and Gases</h2>
+                            <p>Pressure in fluids, whether liquids or gases, depends on the depth and density of the fluid. As depth increases, pressure rises, which explains why deep-sea divers need specialized equipment. Buoyancy, the upward force exerted by a fluid, determines whether an object sinks or floats, based on its density relative to the fluid. These principles are critical for understanding everyday phenomena, such as how submarines operate or why balloons float. A buoyancy simulator lets students experiment by altering the density of objects and liquids to see how pressure and buoyant force affect their movement, providing a hands-on way to grasp these concepts.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="stem">
+            <div class="row mt-4" >
+                <!-- First Activity: Acids, Bases and the pH Scale -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Acids, Bases and the pH Scale</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2uHZ4Fwjx7o?si=_bhTqYU88FcBLM3d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Paper</li>
+                                <li>Turmeric</li>
+                                <li>Lemon</li>
+                                <li>Baking soda solution (base)</li>
+                                <li>Clear cups</li>
+                                <li>Water</li>
+                                <li>Spoon</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Fill one clear cup with water and add a spoonful of baking soda...</li>
+                                <li>Squeeze lemon juice into another clear cup...</li>
+                                <li>Dip a small strip of the turmeric-coated paper into the lemon juice...</li>
+                                <li>Dip another strip into the baking soda solution...</li>
+                                <li>Test other household liquids using the turmeric paper...</li>
+                                <li>Discuss how turmeric acts as a natural pH indicator...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Second Activity: Elements, Compounds and Mixtures -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Elements, Compounds and Mixtures</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MESUwfDzqlQ?si=zgyx_LtJR8jS7Bb5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Colored beads</li>
+                                <li>Glue or clay</li>
+                                <li>Sand</li>
+                                <li>Salt</li>
+                                <li>Water</li>
+                                <li>Transparent containers</li>
+                                <li>Sieve or coffee filter</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Use beads or LEGOs to represent atoms...</li>
+                                <li>Combine sand and salt in a container...</li>
+                                <li>Add the mixture to water...</li>
+                                <li>Use a sieve or coffee filter to separate sand...</li>
+                                <li>Heat or leave the solution to evaporate water...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Third Activity: Rates of Reaction -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Rates of Reaction</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fg_GFgGam34?si=rBRtIElmEDysckBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Effervescent tablets (e.g., Alka-Seltzer)</li>
+                                <li>Water</li>
+                                <li>Ice</li>
+                                <li>Warm Water</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Fill three clear cups with water...</li>
+                                <li>Drop an effervescent tablet into each cup...</li>
+                                <li>Start the stopwatch and record the time...</li>
+                                <li>Note how temperature affects the speed of the reaction...</li>
+                                <li>Discuss how temperature and surface area impact the rate...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row mt-5">
+                <!-- Fourth Activity: Human Nervous System -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Human Nervous System</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1ykkGiJ15lM?si=oYdqnefGwXnZFuh-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Pencil</li>
+                                <li>Color paper</li>
+                                <li>Glue</li>
+                                <li>Cardboard</li>
+                                <li>Tissues</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Make the body layout out of cardboard...</li>
+                                <li>Make brain and color it pink...</li>
+                                <li>Draw a spine with yellow color...</li>
+                                <li>Draw nerves and make nerves with tissues...</li>
+                                <li>Paint the nerves with blue...</li>
+                                <li>Label the parts...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Fifth Activity: Photosynthesis -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Photosynthesis</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4YSVmhYOZTU?si=SrXwcYfzIKY37oiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Pencil</li>
+                                <li>Color paper</li>
+                                <li>Glue</li>
+                                <li>Cardboard</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Glue blue paper to the cardboard to make the background...</li>
+                                <li>Make flower, stem, leaves, roots, clouds, sun out of color paper...</li>
+                                <li>Glue them on the blue background...</li>
+                                <li>Label them...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Sixth Activity: Respiration -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Respiration</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/HcetnVG7SGg?si=Cp61mF9oiq0GCfM3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Clay</li>
+                                <li>Plastic straw</li>
+                                <li>2 Balloons</li>
+                                <li>Hot glue gun</li>
+                                <li>Tape</li>
+                                <li>Plastic bottle</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Use hot gule gun to make the straw into a fork</li>
+                            <li>tape the 2 balloon with the straw</li>
+                            <li>cut the bottle into half</li>
+                            <li>cut a hole on the cap</li>
+                            <li>put the straw into the cap seal it with hot glue gun</li>
+                            <li>cut a balloon and put in on the under side of the half bottle and tape them together</li>
+                            <li>pull the balloon to test this out!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row mt-5">
+                <!-- Seventh Activity: Steam Engine -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Steam Engine</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eXL7h0n9d2Q?si=zuAuqaKETmIrtH91" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Pen</li>
+                                <li>Knife</li>
+                                <li>Empty can</li>
+                                <li>M-seal</li>
+                                <li>Wire</li>
+                                <li>Cupboard</li>
+                                <li>Tissue roll</li>
+                                <li>Chopstick</li>
+                                <li>Candle</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Prepare the Cups</li>
+                        <li>Set Up the Empty Cups</li>
+                        <li>Create Paper Towel Bridges</li>
+                        <li>Connect the Cups</li>
+                        <li>Observe Capillary Action</li>
+                        <li>Mixing Colors (Optional)</li>
+                        <li>Document Your Findings</li>
+                        <li>Discussion and Explanation</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <!-- Eighth Activity: Simple Electric Circuit -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Simple Electric Circuit</h2>
+                    <div class="row">
+                        <iframe width="100%" height="215" src="https://www.youtube.com/embed/NxXiFYt3HXg?si=4_PYUXGjZG9tOB9W" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>1 Battery</li>
+                                <li>2 Insulated Wires</li>
+                                <li>1 Light Bulb</li>
+                                <li>1 Light Bulb Holder</li>
+                                <li>Electrical Tape</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Gather Materials</li>
+                                <li>Prepare your wires</li>
+                                <li>Connect the Wires to the Battery</li>
+                                <li>Connect the Second Wire</li>
+                                <li>Ensure Proper Connectivity</li>
+                                <li>Test Your Circuit</li>
+                                <li>Troubleshooting</li>
+                                <li>Safety Considerations</li>
+                                <li>Experiment</li>
+                            </ul>
+                        </div>
+                        </div>
+                        </div>
+    
+                        <div class="col-md-4">
+                            <h2 class="stem-title">Static Electricity</h2>
+                            <div class="row">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ViZNgU-Yt-Y?si=pQkfX76yn-4lAFMd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="stem-act">
+                                    <h4>Things needed for this STEM activity</h4>
+                                    <ul class="need-list" style="list-style-type:square;">
+                                        <li>Balloons </li>
+                                        <li>Salt and Pepper  </li>
+                                        <li>Plastic Combs</li>
+                                        <li>Soda Cans</li>
+                                        <li>Soap Bubbles</li>
+                                        <li>Insulated Wire and Metallic Balls</li>
+                                        <li>Leaves or Paper</li>
+                                    </ul>
+                                </div>
+                                <div class="stem-act mt-3">
+                                    <h4>Step by step</h4>
+                                    <ul class="step-list" style="list-style-type: square;">
+                                        <li>1. Static Flyer
+                                            Materials: Balloon, small pieces of paper.
+                                            Steps
+                                              1. Inflate a balloon and rub it on your hair or a wool cloth to charge it.
+                                              2. Hold the balloon near the small paper pieces and observe them being attracted to the balloon.</li>
+                                        <li>  2. Salt and Pepper Experiment
+                                            Materials: Salt, pepper, a balloon.
+                                            Steps
+                                              1. Mix salt and pepper on a flat surface.
+                                              2. Charge the balloon by rubbing it on fabric.
+                                              3. Bring the balloon close to the mixture and observe how the pepper is attracted to the balloon while the salt remains on the surface.</li>
+                                        <li>3. Electrostatic Soap Bubble
+                                            Materials: Soap, water, a balloon.
+                                            Steps
+                                              1. Create a soap bubble.
+                                              2. Charge a balloon and bring it close to the bubble to observe the bubble's behavior.</li>
+                                        <li>4. Bending Water with Static Electricity
+                                            Materials: A faucet, charged balloon.
+                                            Steps
+                                              1. Let a thin stream of water flow from the faucet.
+                                              2. Charge the balloon and bring it close to the path of the water to see it bend toward the balloon.</li>
+                                        <li>5.Rolling Static Soda Can
+                                            Materials: An empty soda can, balloon.
+                                            Steps
+                                              1. Place the soda can on a flat surface.
+                                              2. Charge a balloon by rubbing it on your hair, then bring it near the can to see it roll without direct contact.
+                                        </li>
+                                        <li>  6. Static Pencil Experiment
+                                            Materials: A pencil, a comb, and an egg.
+                                            Steps:
+                                              1. Rub the comb with your hair to create static electricity.
+                                              2. Use the comb to attract the pencil or make the egg move.</li>
+                                        <li>7. Franklin’s Bells Experiment
+                                            Materials: Brass ball, insulated wire.
+                                            Steps:
+                                              1. Set up the brass ball to hang.
+                                              2. Create a static charge in the setup to see it move and produce sound.
+                                             </li>
+                                        <li>    8.Spinning Paper with Static Electricity
+                                            Materials: Paper, a charged balloon.
+                                            Steps:
+                                              1. Cut a piece of paper into a light shape.
+                                              2. Charge a balloon and bring it close to the paper to see it spin.
+                                        </li>
+                                        <li>9. Jumping Leaves Experiment
+                                            Materials: A balloon, leaves.
+                                            Steps:
+                                              1. Charge the balloon by rubbing it.
+                                              2. Hold the balloon near the leaves to make them jump due to static charge.</li>
+                                        <li>10.Make Your Hair Stand
+                                            Materials: A balloon.
+                                            Steps
+                                              1. Rub the balloon on your hair to create static charge.
+                                              2. Observe your hair standing on end when the charged balloon is brought close.
+                                             
+                                                These experiments can help illustrate the principles of static electricity and engage learners in fun scientific exploration.</li>
+                                    </ul>
+                                </div>
+                            </div>       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+            <section id="interactive">
+                <h2>Interactive Learning</h2>
+                <div class="interactive-content">
+                    <div class="interactive-box">
+                        <h3>Take a Quiz</h3>
+                        <p style="text-align: center;">Let's Test Your Knowledge!</p>
+                        <button onclick="location.href='Y8quiz.html'">Start Quiz</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+        <!--Footer start-->
+    <footer class="footer">
+        <div class="container" style="height: 280px;">
+          <div class="row">
+            <div class="footer-col">
+              <h4><b>About This Website</b></h4>
+              <img src="image/logo.png" alt="logo" height="90px" width="80px">
+              <p><b>Our platform offers clear explanations of fundamental science concepts, coupled with exciting hands-on STEM activities that bring theory to life.</b></p>
+            </div>
+            <div class="footer-col">
+              <h4><b>Junior Science Explorer</b></h4>
+              <ul>
+                <li><a href="#index">Home</a></li>
+                <li><a onclick="location.href='about-us.html'">About Us</a></li>
+                <li><a onclick="location.href='contact-us.html'">Contact Us</a></li>
+                <li><a onclick="location.href='Y7.html'">Year 7</a></li>
+                <li><a onclick="location.href='Y8.html'">Year 8</a></li>
+                <li><a onclick="location.href='Y9.html'">Year 9</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4><b>Quick Link</b></h4>
+              <ul>
+                <li><a href="#stem">What is STEM?</a></li>
+                <li><a href="#benefits">Benefits of Studying STEM</a></li>
+                <li><a href="#benefits">Our Sevices</a></li>
+                <li><a href="#testimonal">Testimonal</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4><b>Follow Us</b></h4>
+              <div class="social-link-list">
+                <a href="https://www.tiktok.com/@junior.science.ex?_t=8s4yoUQHvcH&_r=1" class="social-link"><i class="bi bi-tiktok"></i></a>
+                <a href="https://t.me/Junior_Science_Explorer" class="social-link"><i class="bi bi-telegram"></i></a>
+                <a href="https://discord.gg/eSRGZqEk" class="social-link"><i class="bi bi-discord"></i></a>
+              </div>
+             <ul>
+                <li><a href="reference.html">Reference</a></li>
+             </ul>
+            </div>
+            <p style="text-align: center;">&copy; 2024-2025 Junior Explorers. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

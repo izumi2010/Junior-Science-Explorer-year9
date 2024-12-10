@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 9</title>
+     <!--LINKS START-->
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <!--AOS Link-->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+     <!--Bootstrap Icon link-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+      <!-- Bootstap CDN Links -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="nav.css">
+     <link rel="stylesheet" href="index.css">
+     <link rel="stylesheet" href="footer.css">
+     <link rel="stylesheet" href="about-us.html">
+     <link rel="stylesheet" href="index.html">
+     <link class="stylesheet" href="Y7.html">
+     <link class="stylesheet" href="Y8.html">
+     <link class="stylesheet" href="Y9.html">
+     <link rel="stylesheet" href="contact-us.css">
+     <link rel="icon" type="image/png" href="./image/logo.png">
+     <!--LINKS END-->
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lobster&family=Outfit:wght@100..900&family=Spicy+Rice&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap');
+       *{
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+       }
+       .website-name {
+        font-family: "Spicy Rice", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size:25px;
+        color:rgb(255, 175, 45) ;
+       }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: white;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Make sure the body takes up the full height */
+        }
+
+        header {
+            background-color: #cce6ff;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+    position: relative; /* or absolute */
+    right: 650px; /* Moves the icon 10px to the right */
+    top: 5px;   /* Moves the icon 5px down */
+    size: 10px;
+}
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tab_box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 2px solid rgba(229, 229, 229);
+            position: relative;
+        }
+
+        .tab_box .tab_btn {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background: none;
+            border: none;
+            padding: 18px;
+            cursor: pointer;
+        }
+
+        .tab_box .tab_btn.active {
+            color: #ffffff;
+        }
+
+        .line {
+            position: absolute;
+            top: 62px;
+            left: 17px;
+            width: 90px;
+            height: 5px;
+            background-color: #f0eff7;
+            border-radius: 10px;
+            transition: all .3s ease-in-out;
+        }
+
+        .wrapper {
+            width: 70%;
+        }
+
+        img {
+            max-width: 220px;
+            float: left;
+            border: 3px soild floralwhite;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .text-box {
+            color: black;
+        }
+
+        .text-box h2 {
+            font-size: 42px;
+        }
+
+        .text-box p {
+            font-size: 16px;
+        }
+
+        .nav-pills .nav-link {
+            color: black;
+        }
+
+        .nav-pills .nav-link.active {
+            color: black;
+        }
+
+        .nav-pills .nav-link:hover {
+            background-color: #80bfff;
+        }
+
+        .tab-content {
+            padding-top: 20px;
+        }
+
+        #interactive {
+            margin: 40px 20px;
+        }
+
+        #interactive h2 {
+            text-align: center;
+            color: #6a0dad;
+            margin-bottom: 30px;
+        }
+
+        .interactive-content {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .interactive-box {
+            flex: 1 1 300px;
+            background: #f0f8ff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .interactive-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .interactive-box button {
+            background: #80bfff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .interactive-box button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px #80bfff;
+        }
+
+        .tab_box nav .nav-pills {
+            color: #80bfff;
+        }
+        #stem{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="icon-container" onclick="location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left icon" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+            </svg>
+        </div>
+        <h1>Year 9</h1>
+        <div class="container mt-5">
+            <div class="tab_box nav nav-pills justify-content-center flex-wrap" style="color: #80bfff;">
+                <button class="tab_btn active" href="#bio" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="none"'>Biology</button>
+                <button class="tab_btn" href="#chem" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="none"'>Chemistry</button>
+                <button class="tab_btn" href="#physic" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="none"'>Physics</button>
+                <button class="tab_btn" href="#stem" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="inline-block"'>STEM ACTIVITY</button>
+            </div>
+        </div>
+    </header>
+    <div class="container mt-5">
+        <div class="tab-content">
+            <div class="tab-pane active" id="bio">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="flex-column nav">
+                            <li class="nav-item"><a href="#bt1" class="nav-link active" data-bs-toggle="tab">Cell Structure and Function</a></li>
+                            <li class="nav-item"><a href="#bt2" class="nav-link" data-bs-toggle="tab">Cell Processes</a></li>
+                            <li class="nav-item"><a href="#bt3" class="nav-link" data-bs-toggle="tab">Biological Molecules</a></li>
+                            <li class="nav-item"><a href="#bt4" class="nav-link" data-bs-toggle="tab">Transport in Humans</a></li>
+                            <li class="nav-item"><a href="#bt5" class="nav-link" data-bs-toggle="tab">Respiration</a></li>
+                            <li class="nav-item"><a href="#bt6" class="nav-link" data-bs-toggle="tab">Biodiversity</a></li>
+                            <li class="nav-item"><a href="#bt7" class="nav-link" data-bs-toggle="tab">Plant Nutrition</a></li>
+                            <li class="nav-item"><a href="#bt8" class="nav-link" data-bs-toggle="tab">Ecology and the Environment</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="bt1">
+                                <div class="wrapper">
+                                    <img src="image/cell-function.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Cell Structure and Function</h2>
+                                <p>Cells are the fundamental units of life in all organisms, acting as the building blocks of both structure and function. They come in two main types: prokaryotic (like bacteria, which lack a nucleus) and eukaryotic (like animal and plant cells, which have a nucleus and other specialized organelles). The nucleus controls cellular activities and contains DNA, which encodes genetic information. The cytoplasm is a jelly-like substance where most metabolic reactions occur, facilitated by various enzymes. Surrounding the cell is the cell membrane, a selectively permeable barrier that regulates the movement of substances in and out of the cell. In addition to these, plant cells have unique features such as a cell wall made of cellulose, providing structural support, and chloroplasts, which contain chlorophyll for photosynthesis. The vacuole, filled with cell sap, helps maintain cell turgidity. Organelles like mitochondria (the site of respiration) and ribosomes (protein synthesis) are vital for cell function. Understanding the structure and function of cells helps us grasp how life operates at its most basic level.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="bt2">
+                                <div class="wrapper">
+                                    <img src="image/cell-progress.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Cell Processes</h2>
+                                <p>Cell processes are essential mechanisms that sustain life and allow cells to perform their functions efficiently. Diffusion is the passive movement of molecules from an area of higher concentration to one of lower concentration, crucial for gas exchange in organisms. Osmosis is the diffusion of water across a selectively permeable membrane, vital for maintaining cell turgidity in plants and hydration in animals. Active transport is an energy-consuming process that moves substances against their concentration gradient, enabling the uptake of essential nutrients like minerals in plant roots. Additionally, photosynthesis, occurring in chloroplasts of plants, converts light energy into chemical energy stored in glucose. Cellular respiration in mitochondria breaks down glucose to release energy in the form of ATP, which powers cellular activities. These processes are interconnected, ensuring that cells maintain homeostasis and meet the demands of living organisms.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="bt3">
+                                <div class="wrapper">
+                                    <img src="image/biological.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Biological Molecules</h2>
+                                <p>Biological molecules are the chemical compounds that make up living organisms and are vital for their survival. The main categories are carbohydrates, proteins, lipids, and nucleic acids. Carbohydrates, such as glucose and starch, serve as a primary energy source and energy storage. Proteins, composed of amino acids, play diverse roles, including structural support, enzyme activity, and transport. Lipids, such as fats and oils, provide long-term energy storage, insulation, and are key components of cell membranes. Nucleic acids, like DNA and RNA, store and transmit genetic information, guiding the synthesis of proteins. Enzymes, specialized proteins, act as biological catalysts, speeding up reactions like digestion without being consumed. These molecules interact in complex ways to sustain life processes, highlighting their importance in both cellular and organismal functions.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="bt4">
+                                <div class="wrapper">
+                                    <img src="image/circulation.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Transport in Humans</h2>
+                                <p>The human body relies on an intricate transport system to distribute oxygen, nutrients, hormones, and remove waste products. This system, known as the circulatory system, comprises the heart, blood, and blood vessels. The heart, a muscular organ, pumps blood through two main circuits: the pulmonary circuit, which transports deoxygenated blood to the lungs to receive oxygen, and the systemic circuit, which delivers oxygen-rich blood to the rest of the body. Blood travels through arteries (which carry oxygenated blood away from the heart), veins (which return deoxygenated blood), and capillaries, where the exchange of gases, nutrients, and waste occurs at the cellular level. Blood contains red blood cells (which transport oxygen using hemoglobin), white blood cells (which defend against infections), platelets (which help in clotting), and plasma (the liquid component carrying nutrients and waste). This transport system ensures every cell receives what it needs to function efficiently while removing harmful substances.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="bt5">
+                                <div class="wrapper">
+                                    <img src="image/respiration.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Respiration</h2>
+                                <p>Respiration is the biochemical process by which cells release energy from glucose, enabling them to perform vital functions. Aerobic respiration, which occurs in the presence of oxygen, produces a large amount of energy along with carbon dioxide and water as byproducts. The equation for this process is:
+                                    Glucose+Oxygen→Carbon dioxide+Water+Energy (ATP)Glucose+Oxygen→Carbon dioxide+Water+Energy (ATP)
+                                    When oxygen is scarce, cells resort to anaerobic respiration, which generates less energy and produces lactic acid in animals or ethanol and carbon dioxide in plants and yeast. While anaerobic respiration is less efficient, it is crucial during short bursts of intense activity when oxygen supply is limited. The energy released during respiration, stored as ATP (adenosine triphosphate), is used for various cellular activities, including muscle contraction, active transport, and synthesis of molecules.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="bt6">
+                                <div class="wrapper">
+                                    <img src="image/biodiversity.webp" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Biodiversity</h2>
+                                <p>Biodiversity encompasses the variety of life forms on Earth, including different species of plants, animals, fungi, and microorganisms, as well as the ecosystems they inhabit. It is a key indicator of the health of ecosystems and provides numerous benefits, such as food, medicine, and ecosystem services like pollination, water purification, and climate regulation. High biodiversity ensures ecosystem stability and resilience to changes. However, human activities such as deforestation, pollution, habitat destruction, and climate change pose severe threats to biodiversity, leading to species extinction and loss of ecosystem services. Conservation efforts, including protected areas, sustainable practices, and public awareness, are essential to preserve biodiversity and ensure the health of our planet for future generations.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="bt7">
+                                <div class="wrapper">
+                                    <img src="image/nutrient-plant.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Plant Nutrition</h2>
+                                <p>Plants are autotrophs, meaning they produce their own food through photosynthesis, a process that uses sunlight, carbon dioxide, and water to synthesize glucose and release oxygen. This process occurs in the chloroplasts, where the pigment chlorophyll captures light energy. The glucose produced is used as an energy source for growth, repair, and reproduction, while excess glucose is stored as starch. Plants also require essential mineral nutrients from the soil, such as nitrogen for protein synthesis, phosphorus for energy transfer, and potassium for enzyme activation. Water and minerals are transported through the xylem, while the phloem distributes sugars and other nutrients. Proper plant nutrition supports healthy growth and enables plants to provide food and oxygen for other organisms.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="bt8">
+                                <div class="wrapper">
+                                    <img src="image/ecology.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Ecology and the Environment</h2>
+                                <p>Ecology is the study of how organisms interact with each other and their environment. Ecosystems consist of biotic factors (living organisms) and abiotic factors (non-living components like air, water, and soil). Organisms within an ecosystem are interdependent, forming complex food chains and food webs that illustrate energy flow and nutrient cycling. Human activities, such as deforestation, pollution, and climate change, disrupt these ecosystems, causing issues like loss of biodiversity, habitat destruction, and global warming. Conservation strategies, such as afforestation, waste reduction, and sustainable practices, are vital for maintaining ecological balance. Understanding and protecting ecosystems ensures that resources are available for future generations while preserving the natural beauty and functionality of the planet.</p>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="chem">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="flex-column nav">
+                            <li class="nav-item"><a href="#ct1" class="nav-link active" data-bs-toggle="tab">Atomic Structure and the Periodic Table</a></li>
+                            <li class="nav-item"><a href="#ct2" class="nav-link" data-bs-toggle="tab">Electron Configuration and Chemical Bonds</a></li>
+                            <li class="nav-item"><a href="#ct3" class="nav-link" data-bs-toggle="tab">The Mole and Molar Mass</a></li>
+                            <li class="nav-item"><a href="#ct4" class="nav-link" data-bs-toggle="tab">Chemical Reactions and Balancing Equations</a></li>
+                            <li class="nav-item"><a href="#ct5" class="nav-link" data-bs-toggle="tab">Acids, Bases, and the pH Scale</a></li>
+                            <li class="nav-item"><a href="#ct6" class="nav-link" data-bs-toggle="tab">Rates of Reaction</a></li>
+                            <li class="nav-item"><a href="#ct7" class="nav-link" data-bs-toggle="tab">Energy Changes in Reactions</a></li>
+                            <li class="nav-item"><a href="#ct8" class="nav-link" data-bs-toggle="tab">Separation Techniques</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="ct1">
+                                <div class="wrapper">
+                                    <img src="image/y7-che-periocis.webp" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Atomic Structure and the Periodic Table</h2>
+                                <p>Atoms are the fundamental units of matter, consisting of three subatomic particles: protons, neutrons, and electrons. Protons, carrying a positive charge, and neutrons, which are neutral, are located in the atom's nucleus. Electrons, which carry a negative charge, orbit the nucleus in regions called electron shells. Each element is defined by its atomic number, representing the number of protons in its nucleus. The periodic table is a systematic arrangement of elements, grouped based on similar properties and increasing atomic number. Elements are categorized into metals, nonmetals, and metalloids, with rows called periods and columns known as groups. Understanding atomic structure and the layout of the periodic table allows students to predict the behavior and properties of elements.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct2">
+                                <div class="wrapper">
+                                    <img src="image/electron.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Electron Configuration and Chemical Bonds</h2>
+                                <p>Electron configuration describes how electrons are distributed in an atom's electron shells. Atoms strive for a stable electronic arrangement, often achieved through bonding. Ionic bonds form when one atom transfers electrons to another, resulting in oppositely charged ions, as seen in sodium chloride (NaCl). Covalent bonds, on the other hand, occur when atoms share electrons, as in water (H₂O). These bonds are the foundation of chemical compounds, determining their properties and reactivity. Mastery of electron configurations and bonding concepts explains how matter is structured and how chemical reactions occur</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct3">
+                                <div class="wrapper">
+                                    <img src="image/mass-mass-moles.webp" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>The Mole and Molar Mass</h2>
+                                <p>The mole is a fundamental unit in chemistry that represents 6.022×10236.022×1023 particles, known as Avogadro's number. This unit allows chemists to measure substances in bulk, making it easier to quantify atoms, molecules, and ions in reactions. Molar mass, the mass of one mole of a substance, is calculated using atomic masses from the periodic table. For instance, the molar mass of water (H₂O) is 18 g/mol. Understanding moles and molar mass is crucial for performing stoichiometric calculations and ensuring chemical reactions are balanced on a macroscopic scale.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct4">
+                                <div class="wrapper">
+                                    <img src="image/Balance-Equation-Chemistry.jpg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Chemical Reactions and Balancing Equations</h2>
+                                <p>Chemical reactions involve breaking and forming bonds between atoms, leading to new substances with different properties. Reactions are classified into types, including synthesis, where elements combine to form a compound; decomposition, where compounds break apart; and combustion, involving oxygen to produce energy. The law of conservation of mass states that matter cannot be created or destroyed, so chemical equations must be balanced. For example, the combustion of methane (CH₄) is balanced as:
+                                    CH4+2O2→CO2+2H2OCH4​+2O2​→CO2​+2H2​O
+                                    Balancing ensures that the number of atoms of each element is equal on both sides of the equation, reflecting real-world chemical behavior.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct5">
+                                <div class="wrapper">
+                                    <img src="image/ph-scale.svg" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Acids, Bases, and the pH Scale</h2>
+                                <p>Acids and bases are fundamental chemical substances with distinct properties. Acids release hydrogen ions (H⁺) in solutions, while bases produce hydroxide ions (OH⁻). The pH scale measures acidity or alkalinity, ranging from 0 (strongly acidic) to 14 (strongly basic), with 7 as neutral. Indicators, such as litmus paper or universal indicator, help determine the pH of a solution. Acids react with bases in neutralization reactions to form water and a salt. For instance:
+                                    HCl+NaOH→NaCl+H2OHCl+NaOH→NaCl+H2​O
+                                    Understanding acids, bases, and the pH scale is vital in fields like biology, medicine, and environmental science.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct6">
+                                <div class="wrapper">
+                                    <img src="image/rate.png" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Rates of Reaction</h2>
+                                <p>The rate of a reaction refers to how quickly reactants are converted into products. Several factors influence reaction rates, including temperature, concentration, surface area, and the presence of a catalyst. Increasing temperature provides particles with more energy, leading to more frequent and effective collisions. Higher concentrations or greater surface area also increase collision rates. Catalysts speed up reactions without being consumed. For example, enzymes in the human body act as biological catalysts to accelerate metabolic processes. Learning about reaction rates helps explain real-world processes like cooking, manufacturing, and even biological functions.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct7">
+                                <div class="wrapper">
+                                    <img src="image/energy-reaction.png" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Energy Changes in Reactions</h2>
+                                <p>Chemical reactions involve energy changes as bonds are broken and formed. Exothermic reactions release energy, often as heat, making the surroundings warmer. Combustion, like burning wood, is a common exothermic process. Conversely, endothermic reactions absorb energy, causing a temperature drop in the surroundings. Photosynthesis, where plants use sunlight to convert carbon dioxide and water into glucose and oxygen, is an endothermic process. Energy diagrams help visualize these changes, showing whether a reaction releases or absorbs energy. Understanding energy changes is crucial for applications like energy production, refrigeration, and understanding biological systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="tab-pane" id="ct8">
+                                <div class="wrapper">
+                                    <img src="image/sublimation.webp" alt="" width="500" height="333">
+                                    <div class="text-box">
+                                <h2>Separation Techniques</h2>
+                                <p>Separation techniques are methods used to isolate and purify substances. Filtration separates solids from liquids using a filter, while distillation separates mixtures based on boiling points, such as purifying water. Crystallization forms solid crystals from a solution, useful for obtaining pure salts. Chromatography separates substances based on their movement through a medium, often used to identify compounds in a mixture. These techniques are essential in industries like pharmaceuticals, food processing, and environmental science. Mastering separation techniques highlights the practical applications of chemistry in daily life.</p>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="physic">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="flex-column nav">
+                            <li class="nav-item"><a href="#dt1" class="nav-link active" data-bs-toggle="tab">Motion and Speed</a></li>
+                            <li class="nav-item"><a href="#dt2" class="nav-link" data-bs-toggle="tab">Forces and Newton’s Laws of Motion</a></li>
+                            <li class="nav-item"><a href="#dt3" class="nav-link" data-bs-toggle="tab">Gravity and Weight</a></li>
+                            <li class="nav-item"><a href="#dt4" class="nav-link" data-bs-toggle="tab">Energy Forms and Conservation</a></li>
+                            <li class="nav-item"><a href="#dt5" class="nav-link" data-bs-toggle="tab">Work, Power, and Efficiency</a></li>
+                            <li class="nav-item"><a href="#dt6" class="nav-link" data-bs-toggle="tab">Waves and Sound</a></li>
+                            <li class="nav-item"><a href="#dt7" class="nav-link" data-bs-toggle="tab">Light and Optics</a></li>
+                            <li class="nav-item"><a href="#dt8" class="nav-link" data-bs-toggle="tab">Electricity and Ohm’s Law</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                        <div class="tab-pane active" id="dt1">
+                            <div class="wrapper">
+                                <img src="image/motion.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Motion and Speed</h2>
+                            <p>Motion is a fundamental concept in physics, describing how objects move in space. Speed is a scalar quantity that measures how fast an object is moving, calculated as the distance traveled per unit of time. Velocity, on the other hand, is a vector quantity, which means it includes both the speed and direction of motion. Acceleration measures the rate at which velocity changes over time, whether through speeding up, slowing down, or changing direction. Understanding the distinction between scalar quantities (e.g., speed) and vector quantities (e.g., velocity) is crucial for analyzing motion. Graphs depicting distance-time and velocity-time relationships help visualize these concepts and provide insights into real-world applications like transportation and sports.</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="tab-pane" id="dt2">
+                            <div class="wrapper">
+                                <img src="image/1st-law.svg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Forces and Newton’s Laws of Motion</h2>
+                            <p>Forces are pushes or pulls that cause objects to move, stop, or change direction. Newton's three laws of motion form the foundation of classical mechanics.
+
+                                First Law (Law of Inertia): An object remains at rest or in uniform motion unless acted upon by an external force.
+                                Second Law: The acceleration of an object is proportional to the net force acting on it and inversely proportional to its mass (F=maF=ma).
+                                Third Law: For every action, there is an equal and opposite reaction.
+                                These laws explain phenomena ranging from a ball rolling down a hill to rockets launching into space. Force diagrams help visualize the forces acting on objects, making it easier to predict motion.</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="tab-pane" id="dt3">
+                            <div class="wrapper">
+                                <img src="image/weight.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Gravity and Weight</h2>
+                            <p>Gravity is a natural force of attraction between two masses. On Earth, gravity gives objects weight, which is the force exerted by gravity on an object’s mass. Weight (W=mgW=mg) depends on the gravitational field strength (gg), which varies between planets, while mass remains constant everywhere. For example, an astronaut weighs less on the Moon because the Moon’s gravity is weaker, but their mass remains the same. Gravitational fields govern planetary orbits, tides, and even phenomena like black holes. Understanding gravity is essential in fields ranging from engineering to astronomy.</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="tab-pane" id="dt4">
+                            <div class="wrapper">
+                                <img src="image/energy-transform.png" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Energy Forms and Conservation</h2>
+                            <p>Energy exists in various forms, such as kinetic energy (energy of motion), potential energy (stored energy due to position), thermal energy (heat), and chemical energy (stored in bonds). The law of conservation of energy states that energy cannot be created or destroyed but can transform from one form to another. For instance, in a roller coaster, potential energy at the highest point converts to kinetic energy as it descends. Learning about energy transformations helps explain natural processes, such as photosynthesis, and technological advancements, like renewable energy systems.</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="tab-pane" id="dt5">
+                            <div class="wrapper">
+                                <img src="image/work-power-energy.webp" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Work, Power, and Efficiency</h2>
+                            <p>Work is done when a force moves an object over a distance, calculated as W=FdW=Fd, where FF is the force applied and dd is the displacement. Power measures the rate at which work is done, calculated as P=WtP=tW​, where tt is time. Efficiency is the ratio of useful energy output to total energy input, expressed as a percentage. Understanding these concepts is vital in evaluating machines and energy systems, improving designs to reduce energy waste and enhance performance.</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="tab-pane" id="dt6">
+                            <div class="wrapper">
+                                <img src="image/sound-wave.png" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Waves and Sound</h2>
+                            <p>Waves are disturbances that transfer energy from one place to another without transferring matter. Transverse waves, like light, move perpendicular to their direction of travel, while longitudinal waves, like sound, move parallel. Wave properties include frequency (number of waves per second), amplitude (wave height), and wavelength (distance between two crests). The speed of sound depends on the medium it travels through, moving faster in solids than in gases. Sound waves' frequency and amplitude determine pitch and volume, respectively, explaining phenomena like musical notes and echoes.</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="tab-pane" id="dt7">
+                            <div class="wrapper">
+                                <img src="image/spectrum.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Light and Optics</h2>
+                            <p>Light behaves as both a wave and a particle, enabling phenomena like reflection, refraction, and dispersion. Reflection occurs when light bounces off surfaces, following the law of reflection (angle of incidence=angle of reflectionangle of incidence=angle of reflection). Refraction is the bending of light as it passes through materials of different densities, such as air and water. Lenses focus or disperse light, playing a critical role in devices like glasses and microscopes. The visible spectrum consists of colors that combine to form white light, observable when light passes through a prism. Understanding light enables advances in optics and imaging technologies.</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="tab-pane" id="dt8">
+                            <div class="wrapper">
+                                <img src="image/ohm-law.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Electricity and Ohm’s Law</h2>
+                            <p>Electricity is the flow of electrons through a conductor, driven by voltage (potential difference). Current measures the flow rate of electric charge, while resistance opposes the flow. Ohm's Law (V=IRV=IR) relates voltage (VV), current (II), and resistance (RR), forming the basis of circuit analysis. Circuits consist of components like resistors, capacitors, and switches, enabling the design of electrical systems. Applications range from powering homes to creating advanced electronics. Understanding these principles is key to innovations in electrical engineering.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="stem">
+        <div class="row mt-4">
+            <!-- Column 1 -->
+        <div class="col-md-4">
+            <div class="stem-act">
+                <h4>Rates of Reaction</h4>
+                <iframe width="100%" height="200" src="https://youtu.be/KICUa0vE5yk?si=b3dTrSTC6Pf-EdgV" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h5>Things needed</h5>
+                <ul class="need-list">
+                    <li>Empty tissue box</li>
+                    <li>Thickness rubber</li>
+                    <li>Pencil</li>
+                </ul>
+                <h5>Steps</h5>
+                <ul class="step-list">
+                    <li>Stretch rubber bands...</li>
+                    <li>Place a pencil...</li>
+                    <li>Pluck the bands...</li>
+                    <li>Experiment...</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-md-4">
+            <div class="stem-act">
+                <h4>Motion and Speed</h4>
+                <iframe width="100%" height="200" src="https://youtu.be/fg_GFgGam34?si=wwN8qnTjGBaCX_Rr" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h5>Things needed</h5>
+                <ul class="need-list">
+                    <li>Toys or cars</li>
+                    <li>Tape</li>
+                    <li>Ruler</li>
+                    <li>Books</li>
+                </ul>
+                <h5>Steps</h5>
+                <ul class="step-list">
+                    <li>Build a ramp...</li>
+                    <li>Roll a toy car...</li>
+                    <li>Calculate the speed...</li>
+                    <li>Experiment with different ramp heights...</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-md-4">
+            <div class="stem-act">
+                <h4>Forces and Newton's Law of Motion</h4>
+                <iframe width="100%" height="200" src=" https://youtu.be/jr3BOE_EpOk?si=S9chOTYc5Kehk4RJ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h5>Things needed</h5>
+                <ul class="need-list">
+                    <li>Balloon</li>
+                    <li>String</li>
+                    <li>Straw</li>
+                    <li>Tape</li>
+                </ul>
+                <h5>Steps</h5>
+                <ul class="step-list">
+                    <li>Thread a straw through a long piece of string...</li>
+                    <li>Inflate a balloon and tape it to the straw...</li>
+                    <li>Release the balloon...</li>
+                    <li>Change the size of the balloon...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Column 4 -->
+        <div class="col-md-4">
+            <div class="stem-act">
+                <h4>Separation Techniques</h4>
+                <iframe width="100%" height="200" src="https://youtu.be/GdK1ylYUKco?si=LeTavOsUt7S3XYSa" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h5>Things needed</h5>
+                <ul class="need-list">
+                    <li>Sand</li>
+                    <li>Salt</li>
+                    <li>Water</li>
+                    <li>Filter Paper</li>
+                    <li>Magnet</li>
+                    <li>Heat Source</li>
+                </ul>
+                <h5>Steps</h5>
+                <ul class="step-list">
+                    <li>Mix sand, salt, and iron filings...</li>
+                    <li>Use a magnet to separate iron filings...</li>
+                    <li>Filter the mixture...</li>
+                    <li>Evaporate the water...</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Column 5 -->
+        <div class="col-md-4">
+            <div class="stem-act">
+                <h4>Chemical Reactions and Balancing Equations</h4>
+                <iframe width="100%" height="200" src="https://youtu.be/V_Hn6pT4M-Y?si=I6_Fqn5bYPz7HgBm" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h5>Things needed</h5>
+                <ul class="need-list">
+                    <li>Baking Soda</li>
+                    <li>Balloon</li>
+                    <li>Funnel</li>
+                    <li>Vinegar</li>
+                </ul>
+                <h5>Steps</h5>
+                <ul class="step-list">
+                    <li>Add vinegar to a funnel...</li>
+                    <li>Add baking soda to a balloon...</li>
+                    <li>Attach the balloon on the funnel...</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Column 6 -->
+        <div class="col-md-4">
+            <div class="stem-act">
+                <h4>Acids, Bases and the pH Scale</h4>
+                <iframe width="100%" height="200" src="https://youtu.be/hPcRylO4lQM?si=QihZMphVRJYFpRQ3" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h5>Things needed</h5>
+                <ul class="need-list">
+                    <li>Red Cabbage</li>
+                    <li>Water</li>
+                    <li>Vinegar</li>
+                    <li>Pot or heat-safe container</li>
+                    <li>Hot water</li>
+                    <li>Fine-mesh strainer</li>
+                </ul>
+                <h5>Steps</h5>
+                <ul class="step-list">
+                    <li>Cut the cabbage into small pieces...</li>
+                    <li>Add hot water to the container...</li>
+                    <li>Allow the mixture to steep...</li>
+                    <li>Use a fine-mesh strainer...</li>
+                    <li>Gather several household items...</li>
+                    <li>Observe the color changes...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Column 7 -->
+        <div class="col-md-4">
+            <div class="stem-act">
+                <h4>Biodiversity </h4>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/1ykkGiJ15lM?si=bdqhpGl3r0H4jDSY" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h5>Things needed</h5>
+                <ul class="need-list">
+                    <li>Color paper</li>
+                    <li>Hot glue gun</li>
+                    <li>Animal toys</li>
+                    <li>Tree toys</li>
+                </ul>
+                <h5>Steps</h5>
+                <ul class="step-list">
+                    <li>Create a circle and divide it into 6 parts.</li>
+                    <li>Color the biomes with their own color for the ground.</li>
+                    <li>Glue the animals and trees on each of the parts.</li>
+                    <li>Add details to the biomes such as water and humans if needed.</li>
+                    <li>Now you have made a biodiversity model to learn with.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Column 8 -->
+        <div class="col-md-4">
+            <div class="stem-act">
+                <h4>Cell Structure and Function</h4>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/KIT8OUTi7CM?si=LSLjDlXL3h5tfCib" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h5>Things needed</h5>
+                <ul class="need-list">
+                    <li>Color paper</li>
+                    <li>Hot glue gun</li>
+                    <li>Straws</li>
+                    <li>Foam paper</li>
+                    <li>Pencils</li>
+                    <li>Ruler</li>
+                    <li>Tape</li>
+                </ul>
+                <h5>Steps</h5>
+                <ul class="step-list">
+                    <li>Make a circle into a 3D shape.</li>
+                    <li>Cut the foam papers and join them together to form a roll.</li>
+                    <li>Make straws into a sushi roll to create microtubules.</li>
+                    <li>Create more of these.</li>
+                    <li>Glue them onto the 3D shaped circle.</li>
+                    <li>There you have it, your animal cell model.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Column 9 -->
+        <div class="col-md-4">
+            <div class="stem-act">
+                <h4>Ecology and the Environment</h4>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/flMVjMSw8c4?si=vK00Kn6Lhifo26jA" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h5>Things needed</h5>
+                <ul class="need-list">
+                    <li>Cardboard</li>
+                    <li>Color paper</li>
+                    <li>Glue</li>
+                    <li>Stick</li>
+                    <li>Tree toys</li>
+                    <li>Animal toys</li>
+                </ul>
+                <h5>Steps</h5>
+                <ul class="step-list">
+                    <li>Cut out some brown mountains and add white paper on the tip to represent snow.</li>
+                    <li>Roll up 4 brown straw-like rolls and cut them into smaller pieces to make trees.</li>
+                    <li>Cut a blue semi-circle.</li>
+                    <li>Make a factory using cardboard as shown in the video.</li>
+                    <li>Make sun and clouds.</li>
+                    <li>Create a thick base and paint it green for grass and blue for the river.</li>
+                    <li>Add the semi-circle as a background in the middle to create two sides.</li>
+                    <li>Add mountains, sun, clouds, trees, animals, and flowers on one side, and a factory with animals dying on the other side.</li>
+                    <li>Now you have made a model that shows an ecosystem and pollution.</li>
+                </ul>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <section id="interactive">
+                <h2>Interactive Learning</h2>
+                <div class="interactive-content">
+                    <div class="interactive-box">
+                        <h3>Take a Quiz</h3>
+                        <p style="text-align: center;">Let's Test Your Knowledge!</p>
+                        <button onclick="location.href='Y9quiz.html'">Start Quiz</button>
+                    </div>
+                </div>
+            </section>
+       </div>
+       </div>
+        <!--Footer start-->
+    <footer class="footer">
+        <div class="container" style="height: 280px;">
+          <div class="row">
+            <div class="footer-col">
+              <h4><b>About This Website</b></h4>
+              <img src="image/logo.png" alt="logo" height="90px" width="80px">
+              <p><b>Our platform offers clear explanations of fundamental science concepts, coupled with exciting hands-on STEM activities that bring theory to life.</b></p>
+            </div>
+            <div class="footer-col">
+              <h4><b>Junior Science Explorer</b></h4>
+              <ul>
+                <li><a href="#index">Home</a></li>
+                <li><a onclick="location.href='about-us.html'">About Us</a></li>
+                <li><a onclick="location.href='contact-us.html'">Contact Us</a></li>
+                <li><a onclick="location.href='Y7.html'">Year 7</a></li>
+                <li><a onclick="location.href='Y8.html'">Year 8</a></li>
+                <li><a onclick="location.href='Y9.html'">Year 9</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4><b>Quick Link</b></h4>
+              <ul>
+                <li><a href="#stem">What is STEM?</a></li>
+                <li><a href="#benefits">Benefits of Studying STEM</a></li>
+                <li><a href="#benefits">Our Sevices</a></li>
+                <li><a href="#testimonal">Testimonal</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4><b>Follow Us</b></h4>
+              <div class="social-link-list">
+                <a href="https://www.tiktok.com/@junior.science.ex?_t=8s4yoUQHvcH&_r=1" class="social-link"><i class="bi bi-tiktok"></i></a>
+                <a href="https://t.me/Junior_Science_Explorer" class="social-link"><i class="bi bi-telegram"></i></a>
+                <a href="https://discord.gg/eSRGZqEk" class="social-link"><i class="bi bi-discord"></i></a>
+              </div>
+             <ul>
+                <li><a href="reference.html">Reference</a></li>
+             </ul>
+            </div>
+            <p style="text-align: center;">&copy; 2024-2025 Junior Explorers. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+        
+</body>
+</html>

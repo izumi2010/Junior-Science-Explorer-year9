@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 7</title>
+     <!--LINKS START-->
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <!--AOS Link-->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+     <!--Bootstrap Icon link-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+      <!-- Bootstap CDN Links -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="nav.css">
+     <link rel="stylesheet" href="index.css">
+     <link rel="stylesheet" href="footer.css">
+     <link rel="stylesheet" href="about-us.html">
+     <link rel="stylesheet" href="index.html">
+     <link class="stylesheet" href="Y7.html">
+     <link class="stylesheet" href="Y8.html">
+     <link class="stylesheet" href="Y9.html">
+     <link rel="stylesheet" href="contact-us.css">
+     <link rel="icon" type="image/png" href="./image/logo.png">
+     <!--LINKS END-->
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lobster&family=Outfit:wght@100..900&family=Spicy+Rice&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap');
+       *{
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+       }
+       .website-name {
+        font-family: "Spicy Rice", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size:25px;
+        color:rgb(255, 175, 45) ;
+       }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+            position: relative;
+            right: 650px;
+            /* Moves the icon 10px to the right */
+            top: 5px;
+            /* Moves the icon 5px down */
+            size: 10px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tab_box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 2px solid rgba(229, 229, 229);
+            position: relative;
+        }
+
+        .tab_box .tab_btn {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background: none;
+            border: none;
+            padding: 18px;
+            cursor: pointer;
+        }
+
+        .tab_box .tab_btn.active {
+            color: #ffffff;
+        }
+
+        img {
+            size: 100px;
+        }
+
+        .line {
+            position: absolute;
+            top: 62px;
+            left: 17px;
+            width: 90px;
+            height: 5px;
+            background-color: white;
+            border-radius: 10px;
+            transition: all .3s ease-in-out;
+        }
+
+        .content-container img {
+            max-width: 300px;
+            margin-left: 20px;
+        }
+
+        .wrapper {
+            width: 70%;
+        }
+
+        img {
+            max-width: 220px;
+            float: left;
+            border: 3px soild floralwhite;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .text-box {
+            color: black;
+        }
+
+        .text-box h2 {
+            font-size: 42px;
+        }
+
+        .text-box p {
+            font-size: 16px;
+        }
+
+        .nav-pills .nav-link {
+            color: black;
+        }
+
+        .nav-pills .nav-link.active {
+            color: black;
+        }
+
+        .nav-pills .nav-link:hover {
+            background-color: white;
+        }
+
+        .tab-content {
+           padding-top: 2px;
+        }
+
+        #interactive {
+            margin: 40px 20px;
+        }
+
+        #interactive h2 {
+            text-align: center;
+            color: #6a0dad;
+            margin-bottom: 30px;
+        }
+
+        .interactive-content {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .interactive-box {
+            flex: 1 1 300px;
+            background: #f0f8ff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .interactive-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .interactive-box button {
+            background: #80bfff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .interactive-box button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px #80bfff;
+        }
+
+        .tab_box nav .nav-pills {
+            color: #80bfff;
+        }
+       #stem{
+            display: none;
+        }
+        .stem-act {
+            padding: 15px;
+        }
+        .need-list li {
+            font-size: 20px;
+        }
+        .step-list li {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="title" style="background-color: #cce6ff;" id="index.html">
+        <div class="icon-container" onclick="location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left icon" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+            </svg>
+        </div>
+        </div>
+        <h1>Lower Secondary level (Year 7)</h1>
+        <div class="container mt-5">
+            <div class="tab_box nav nav-pills justify-content-center flex-wrap">
+                <button class="tab_btn active" href="#bio" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="none"'>Biology</button>
+                <button class="tab_btn" href="#chem" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="none"'>Chemistry</button>
+                <button class="tab_btn" href="#physic" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="none"'>Physics</button>
+                <button class="tab_btn" href="#stem" class="nav-link" data-bs-toggle="tab" onclick='document.getElementById("stem").style.display="inline-block"'>STEM ACTIVITY</button>
+            </div>
+        </div>
+    </header>
+    <div class="container mt-5">
+    <div class="tab-content">
+            <div class="tab-pane active" id="bio">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="flex-column nav">
+                            <li class="nav-item"><a href="#bt1" class="nav-link active" data-bs-toggle="tab">Cell
+                                    Structure</a></li>
+                            <li class="nav-item"><a href="#bt2" class="nav-link" data-bs-toggle="tab">Photosynthesis</a>
+                            </li>
+                            <li class="nav-item"><a href="#bt3" class="nav-link" data-bs-toggle="tab">Digestive
+                                    System</a></li>
+                            <li class="nav-item"><a href="#bt4" class="nav-link" data-bs-toggle="tab">Classification of
+                                    Living Organisms</a></li>
+                            <li class="nav-item"><a href="#bt5" class="nav-link" data-bs-toggle="tab">Human
+                                    Circulatory</a></li>
+                            <li class="nav-item"><a href="#bt6" class="nav-link" data-bs-toggle="tab">Ecosystem and Food
+                                    Chain</a></li>
+                            <li class="nav-item"><a href="#bt7" class="nav-link" data-bs-toggle="tab">Variation and
+                                    Adaptation</a></li>
+                            <li class="nav-item"><a href="#bt8" class="nav-link" data-bs-toggle="tab">Reproduction</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="bt1">
+                                <div class="wrapper">
+                                    <img src="image/cell-structure.avif" alt="CellStructure" width="600px" height="350px">
+                                    <div class="text-box">
+                                        <h2>Cell Structure</h2>
+                                        <p>Cells are the basic units of life, and their structure reflects their role in
+                                            supporting the growth, development, and function of living organisms. Key
+                                            components of cell structure include: Nucleus: The control center containing
+                                            genetic material (DNA), regulating cell activities such as growth and
+                                            reproduction. Cytoplasm: A jelly-like substance where most cellular
+                                            processes occur, containing organelles suspended within it. Cell Membrane: A
+                                            semi-permeable barrier that protects the cell and controls the movement of
+                                            substances in and out. Organelles and Their Roles: Mitochondria: The
+                                            powerhouse of the cell, generating energy in the form of ATP. Endoplasmic
+                                            Reticulum (ER): Divided into rough (with ribosomes) and smooth ER, it plays
+                                            a role in protein and lipid synthesis. Golgi Apparatus: Packages and
+                                            modifies proteins for transport. Ribosomes: Sites of protein synthesis.
+                                            Plant vs. Animal Cells: Plant Cells: Contain chloroplasts for
+                                            photosynthesis, a rigid cell wall for structure, and a large central vacuole
+                                            for storage and turgor pressure. Animal Cells: Lack chloroplasts and cell
+                                            walls but contain centrioles for cell division and often have smaller,
+                                            temporary vacuoles.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="tab-pane" id="bt2">
+                        <div class="wrapper">
+                            <img src="image/photosynthesis.avif" alt="Photosynthesis" width="600px" height="350px">
+                            <div class="text-box">
+                        <h2>Photosynthesis</h2>
+                        <p>Photosynthesis is a vital process carried out by plants, algae, and some bacteria,
+                            enabling them to produce their own food. It involves converting sunlight, carbon
+                            dioxide (CO₂), and water (H₂O) into glucose (C₆H₁₂O₆) and oxygen (O₂). This process
+                            takes place in the chloroplasts, where the green pigment chlorophyll captures
+                            sunlight. Photosynthesis not only provides energy for the organism but also releases
+                            oxygen into the atmosphere, making it essential for the survival of most life forms
+                            on Earth.
+                            The process occurs in two main stages: the light-dependent reactions and the
+                            light-independent reactions, also known as the Calvin Cycle. In the first stage,
+                            sunlight splits water molecules into oxygen, protons, and electrons, while
+                            generating energy stored in ATP and NADPH. In the second stage, carbon dioxide is
+                            fixed into glucose using this stored energy. Photosynthesis plays a crucial role in
+                            maintaining Earth's oxygen levels and is the foundation of most food chains,
+                            highlighting its importance in sustaining life on our planet.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="bt3">
+                            <div class="wrapper">
+                                <img src="image/digestive.webp" alt="Digestive" width="600px" height="350px">
+                                <div class="text-box">
+                        <h2>Digestive System</h2>
+                        <p>The digestive system is a complex network of organs that work together to break down
+                            food, absorb nutrients, and eliminate waste. This system ensures the body gets the
+                            energy and essential nutrients needed for growth, repair, and overall function.
+                            The process begins in the mouth, where food is chewed and mixed with saliva,
+                            containing enzymes that start breaking down carbohydrates. From there, the food
+                            travels down the esophagus to the stomach, where gastric juices containing acids and
+                            enzymes break down proteins and kill harmful bacteria.
+                            Next, the partially digested food moves into the small intestine, the primary site
+                            for nutrient absorption. The small intestine receives digestive enzymes from the
+                            pancreas and bile from the liver, which help digest fats and other macronutrients.
+                            The absorbed nutrients are then transported to the bloodstream to be used by the
+                            body.
+                            The remaining undigested material passes into the large intestine, where water and
+                            minerals are absorbed. Finally, waste products are excreted through the rectum and
+                            anus.
+                            The digestive system plays an essential role in maintaining overall health, as it
+                            ensures the body has the nutrients needed for energy, cellular repair, and proper
+                            functioning of all systems.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="bt4">
+                        <div class="wrapper">
+                            <img src="image/classificaton.jpg" alt="Colo" width="600px" height="350px">
+                            <div class="text-box">
+                        <h2>Classification of Living Organisms</h2>
+                        <p>Classification of living organisms, also known as taxonomy, is the scientific process
+                            of organizing and grouping species based on their similarities, differences, and
+                            evolutionary relationships. This system helps scientists study the vast diversity of
+                            life, understand relationships between species, and simplify the naming and
+                            identification of organisms.
+                            Organisms are classified into hierarchical levels, starting from broad categories
+                            and narrowing down to specific ones. The main levels of classification are Domain,
+                            Kingdom, Phylum, Class, Order, Family, Genus, and Species. For example, humans
+                            belong to the domain Eukarya, kingdom Animalia, phylum Chordata, class Mammalia,
+                            order Primates, family Hominidae, genus Homo, and species Homo sapiens.
+                            Each organism is given a two-part scientific name using the binomial nomenclature
+                            system, which includes its genus and species. For instance, the lion is
+                            scientifically named Panthera leo. Modern classification incorporates genetic data
+                            to improve accuracy and reflect evolutionary relationships. This system emphasizes
+                            the interconnectedness and diversity of life, helping us appreciate the complexity
+                            of the natural world.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="bt5">
+                        <div class="wrapper">
+                            <img src="image/circulation.jpg" alt="HC" width="600px" height="350px">
+                            <div class="text-box">
+                        <h2>Human Circulatory</h2>
+                        <p>The human circulatory system, or cardiovascular system, is essential for transporting
+                            blood, nutrients, oxygen, carbon dioxide, and other vital substances throughout the
+                            body. It consists of three main components: the heart, blood vessels, and blood. The
+                            heart is a muscular organ with four chambers that pumps blood, ensuring it
+                            circulates efficiently. Blood vessels, including arteries, veins, and capillaries,
+                            form a network for transporting blood to and from all parts of the body. Arteries
+                            carry oxygen-rich blood away from the heart, veins return oxygen-poor blood back to
+                            the heart, and capillaries allow the exchange of gases, nutrients, and waste
+                            products at the cellular level. Blood itself comprises red blood cells, which
+                            transport oxygen; white blood cells, which fight infections; platelets, which help
+                            in clotting; and plasma, which carries nutrients and hormones.
+                            The circulatory system has two main circuits: systemic circulation, which delivers
+                            oxygenated blood to the body and returns deoxygenated blood to the heart, and
+                            pulmonary circulation, which carries blood to the lungs for oxygenation. This system
+                            works closely with the respiratory system to maintain oxygen and nutrient supply
+                            while removing waste, ensuring the body functions effectively.
+                        </p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="bt6">
+                        <div class="wrapper">
+                            <img src="image/food.avif" alt="EconFC" width="650px" height="350px">
+                            <div class="text-box">
+                        <h2>Ecosystem and Food Chains</h2>
+                        <p>An ecosystem is a community of living organisms interacting with each other and their
+                            physical environment, such as air, water, and soil. It includes both biotic factors
+                            (plants, animals, microbes) and abiotic factors (temperature, sunlight, water, and
+                            nutrients) that work together to sustain life. Ecosystems can vary in size, from
+                            small ponds to vast forests, and are characterized by the flow of energy and cycling
+                            of nutrients.
+                            Food chains are a key part of ecosystems, illustrating the feeding relationships
+                            between organisms. A food chain shows how energy flows from one organism to another,
+                            starting with producers (typically plants or algae) that capture energy from the sun
+                            through photosynthesis. Primary consumers, or herbivores, eat the producers, while
+                            secondary and tertiary consumers, such as carnivores, feed on other consumers.
+                            Decomposers, like bacteria and fungi, break down dead organisms, returning nutrients
+                            to the environment.
+                            Food chains are interconnected, forming food webs that represent the complex feeding
+                            relationships within an ecosystem. The balance of these interactions is crucial for
+                            maintaining the health of ecosystems. Disruptions to one part of a food chain, such
+                            as the removal of a key species, can have ripple effects throughout the entire
+                            ecosystem.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="bt7">
+                        <div class="wrapper">
+                            <img src="image/adaptation.avif" alt="VandA" width="600px" height="350px">
+                            <div class="text-box">
+                        <h2>Variation and Adaptation</h2>
+                        <p>Variation refers to the differences that exist between individuals of the same
+                            species. These differences can be genetic, such as variations in DNA that result
+                            from mutations, or environmental, caused by differences in habitat or lifestyle.
+                            Variation is essential for the process of natural selection, as it provides the raw
+                            material for evolution. Some variations may be advantageous, while others may be
+                            harmful or neutral.
+                            Adaptation is the process by which species become better suited to their environment
+                            over time. This occurs through natural selection, where individuals with beneficial
+                            traits are more likely to survive, reproduce, and pass on those traits to the next
+                            generation. For example, animals in cold climates may develop thicker fur, while
+                            those in dry environments may evolve to conserve water more efficiently. Adaptations
+                            can be structural (physical features like beaks or fins), behavioral (patterns of
+                            movement or feeding), or physiological (internal processes like temperature
+                            regulation).
+                            Through variation and adaptation, species are able to survive and thrive in a
+                            changing world. These processes help organisms to cope with environmental
+                            challenges, ensuring their survival and the continuation of their species across
+                            generations.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="bt8">
+                        <div class="wrapper">
+                            <img src="image/reproduction.webp" alt="Reproduction" width="600px" height="350px">
+                            <div class="text-box">
+                        <h2>Reproduction</h2>
+                        <p>Reproduction is the biological process by which living organisms produce offspring,
+                            ensuring the continuation of their species. It is essential for the survival of life
+                            on Earth. There are two main types of reproduction: sexual reproduction and asexual
+                            reproduction.
+                            In sexual reproduction, two parents contribute genetic material (sperm from the male
+                            and egg from the female) to produce offspring with a combination of traits from
+                            both. This process involves the fusion of gametes, which results in genetic
+                            diversity and allows species to adapt to changing environments over generations.
+                            Sexual reproduction is common in animals, plants, and many other organisms.
+                            In asexual reproduction, a single organism produces offspring without the
+                            involvement of another. The offspring are genetically identical to the parent, which
+                            is known as cloning. Asexual reproduction occurs in many organisms, including
+                            bacteria, fungi, and some plants and animals. Common methods of asexual reproduction
+                            include binary fission, budding, and vegetative propagation.
+                            Reproduction is a key feature of life, ensuring that genetic information is passed
+                            on and that species can survive, evolve, and adapt to their environment. Both sexual
+                            and asexual reproduction play vital roles in maintaining the diversity and balance
+                            of life on Earth.</p>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="chem">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="flex-column nav">
+                    <li class="nav-item"><a href="#ct1" class="nav-link active" data-bs-toggle="tab">States of
+                            Matter</a></li>
+                    <li class="nav-item"><a href="#ct2" class="nav-link" data-bs-toggle="tab">Atoms and
+                            Molecules</a></li>
+                    <li class="nav-item"><a href="#ct3" class="nav-link" data-bs-toggle="tab">The Periodic
+                            Table</a></li>
+                    <li class="nav-item"><a href="#ct4" class="nav-link" data-bs-toggle="tab">Chemical
+                            Reactions</a></li>
+                    <li class="nav-item"><a href="#ct5" class="nav-link" data-bs-toggle="tab">Acids and
+                            Bases</a></li>
+                    <li class="nav-item"><a href="#ct6" class="nav-link" data-bs-toggle="tab">Mixtures and
+                            Solutions</a></li>
+                    <li class="nav-item"><a href="#ct7" class="nav-link" data-bs-toggle="tab">Combustion and
+                            Fire Safety</a></li>
+                    <li class="nav-item"><a href="#ct8" class="nav-link" data-bs-toggle="tab">Chemical
+                            Changes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="ct1">
+                        <div class="wrapper">
+                            <img src="image/y7-che-stateofmatter.jpg" alt="SOM" width="500" height="333">
+                            <div class="text-box">
+                        <h2>States of Matter</h2>
+                        <p>Matter exists in three main states: solid, liquid, and gas. Each state has distinct
+                            characteristics based on the arrangement and movement of its particles. In solids,
+                            particles are tightly packed in a fixed structure, giving them a definite shape and
+                            volume. Liquids have particles that are more loosely connected, allowing them to
+                            flow and take the shape of their container while maintaining a fixed volume. Gases,
+                            on the other hand, have particles that move freely and spread apart, filling any
+                            container they are in. Changes in temperature and pressure can cause matter to
+                            transition between these states, such as melting, freezing, boiling, and condensing.
+                            These transitions are known as changes of state and are a key concept in
+                            understanding the physical properties of matter.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="ct2">
+                        <div class="wrapper">
+                            <img src="image/y7-che-atom.webp" alt="AandM" width="500" height="333">
+                            <div class="text-box">
+                        <h2>Atoms and Molecules</h2>
+                        <p>Atoms are the basic building blocks of all matter. They are incredibly small and
+                            consist of three main subatomic particles: protons and neutrons, which are located
+                            in the nucleus, and electrons, which orbit the nucleus. Atoms of different elements
+                            combine to form molecules through chemical bonds. Molecules are groups of two or
+                            more atoms held together, either of the same element, like oxygen gas (O₂), or
+                            different elements, like water (H₂O). Understanding atoms and molecules is
+                            fundamental in chemistry, as they determine the properties and behavior of
+                            substances in both natural and artificial processes.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="ct3">
+                        <div class="wrapper">
+                            <img src="image/y7-che-periocis.webp" alt="PT" width="500" height="333">
+                            <div class="text-box">
+                        <h2>The Periodic Table</h2>
+                        <p>The Periodic Table is one of the most important tools in chemistry, organizing all
+                            the known elements into a systematic framework that helps scientists understand and
+                            predict their properties. Created by Dmitri Mendeleev in 1869, the table arranges
+                            elements in order of increasing atomic number, which represents the number of
+                            protons in an atom's nucleus. Elements are placed in rows called periods and columns
+                            known as groups or families. Each period corresponds to a specific number of
+                            electron shells, while groups contain elements with similar chemical properties due
+                            to their identical number of valence electrons. The table is divided into metals,
+                            nonmetals, and metalloids based on physical and chemical characteristics. Metals,
+                            found on the left and center, are generally shiny, conductive, and malleable, while
+                            nonmetals, located on the right, are often brittle and poor conductors. Metalloids,
+                            lying along the staircase-shaped boundary, exhibit properties of both metals and
+                            nonmetals. Additionally, elements are categorized into specific groups such as
+                            alkali metals, alkaline earth metals, transition metals, halogens, and noble gases,
+                            each with unique traits. For example, noble gases are inert and rarely react due to
+                            their full outer electron shells, while alkali metals are highly reactive and
+                            readily lose one electron to form compounds. The Periodic Table is not just a chart;
+                            it is a powerful tool that helps chemists predict chemical reactions, design new
+                            materials, and even discover new elements. Its structure reflects the periodic
+                            trends of elements, such as atomic radius, ionization energy, and electronegativity,
+                            making it an essential resource for understanding the natural world.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="ct4">
+                        <div class="wrapper">
+                            <img src="image/resction.png" alt="" width="500" height="333">
+                            <div class="text-box">
+                        <h2>Chemical Reactions</h2>
+                        <p>Chemical reactions are processes in which substances, known as reactants, undergo a
+                            transformation to form new substances called products. During a chemical reaction,
+                            the bonds between atoms in the reactants are broken and rearranged to create new
+                            bonds in the products. These reactions are represented by chemical equations that
+                            show the reactants on the left and the products on the right, separated by an arrow
+                            indicating the direction of the reaction. Chemical reactions are essential to life
+                            and occur in various forms, such as combustion, oxidation, decomposition, and
+                            neutralization. They can release energy, as in exothermic reactions like burning
+                            fuel, or absorb energy, as in endothermic reactions such as photosynthesis. The rate
+                            of a chemical reaction can be influenced by several factors, including temperature,
+                            pressure, concentration of reactants, surface area, and the presence of catalysts,
+                            which speed up reactions without being consumed. Understanding chemical reactions is
+                            fundamental in chemistry, as they explain how substances interact, change, and
+                            contribute to processes in nature and industry, such as energy production, medicine,
+                            and the creation of new materials. By balancing chemical equations, scientists
+                            ensure the conservation of mass, as matter is neither created nor destroyed during a
+                            reaction.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="ct5">
+                        <div class="wrapper">
+                            <img src="image/base-acid.webp" alt="AandB" width="500" height="333">
+                            <div class="text-box">
+                        <h2>Acids and Bases</h2>
+                        <p>Acids and bases are two important categories of chemical substances with distinct
+                            properties and roles in various chemical processes. Acids are substances that
+                            release hydrogen ions (H⁺) in a solution, making them proton donors. They typically
+                            taste sour, turn blue litmus paper red, and react with metals to produce hydrogen
+                            gas. Common examples include hydrochloric acid (HCl), sulfuric acid (H₂SO₄), and
+                            citric acid, found in citrus fruits. Bases, on the other hand, release hydroxide
+                            ions (OH⁻) in a solution, acting as proton acceptors. They taste bitter, feel
+                            slippery, and turn red litmus paper blue. Examples of bases include sodium hydroxide
+                            (NaOH), ammonia (NH₃), and baking soda (sodium bicarbonate). The strength of acids
+                            and bases is measured on the pH scale, which ranges from 0 to 14. Acids have a pH
+                            less than 7, bases have a pH greater than 7, and a pH of 7 indicates a neutral
+                            substance, such as pure water. When acids and bases react, they undergo a
+                            neutralization reaction, forming a salt and water. These reactions are essential in
+                            many everyday processes, from digestion in the human body to industrial applications
+                            like soap production. Understanding acids and bases is crucial in chemistry, as they
+                            play a fundamental role in chemical reactions and the behavior of substances.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="ct6">
+                        <div class="wrapper">
+                            <img src="image/mixture-solu.jpg" alt="MandS" width="500" height="333">
+                            <div class="text-box">
+                        <h2>Mixtures and Solutions</h2>
+                        <p>Mixtures and solutions are combinations of two or more substances, but they differ in
+                            how the substances are combined and distributed. A mixture is a physical blend of
+                            substances where each component retains its own properties and can be separated by
+                            physical means, such as filtration, evaporation, or magnetism. Mixtures can be
+                            classified as homogeneous or heterogeneous. Homogeneous mixtures, also known as
+                            solutions, have a uniform composition throughout, like salt dissolved in water. In
+                            contrast, heterogeneous mixtures have visibly different components, such as sand
+                            mixed with iron filings. Solutions are a specific type of mixture where a solute
+                            (the substance being dissolved) is evenly distributed within a solvent (the
+                            substance doing the dissolving). Common examples include sugar dissolved in tea or
+                            oxygen dissolved in water. Solutions can exist in all states of matter, such as
+                            solid alloys, liquid beverages, or gaseous air. The concentration of a solution
+                            determines the ratio of solute to solvent and can be expressed in units like
+                            molarity or percentage. Understanding mixtures and solutions is essential in
+                            chemistry and daily life, as they are involved in processes like food preparation,
+                            medicine formulation, and environmental management.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="ct7">
+                        <div class="wrapper">
+                            <img src="image/combustion.jpg" alt="CandF" width="500" height="333">
+                            <div class="text-box">
+                        <h2>Combustion and Fire Safety</h2>
+                        <p>Combustion is a chemical reaction in which a substance, known as a fuel, reacts
+                            rapidly with oxygen to release energy in the form of heat and light. This reaction
+                            often produces flames and generates byproducts such as carbon dioxide, water vapor,
+                            and sometimes harmful substances like carbon monoxide or soot, depending on the type
+                            of fuel and conditions. Combustion is classified into complete and incomplete
+                            combustion. Complete combustion occurs when there is a sufficient oxygen supply,
+                            producing a clean burn with minimal pollutants, while incomplete combustion happens
+                            with limited oxygen, resulting in toxic emissions. Combustion is essential in
+                            everyday life, powering vehicles, generating electricity, and cooking food. However,
+                            it also poses risks, making fire safety a critical concern. Preventing and
+                            controlling fires requires understanding the fire triangle: fuel, oxygen, and heat.
+                            Removing any one of these components can stop a fire. Fire safety measures include
+                            proper storage of flammable materials, using fire extinguishers, installing smoke
+                            detectors, and creating evacuation plans. Additionally, educating individuals about
+                            fire prevention and response, such as not leaving open flames unattended or knowing
+                            how to operate fire extinguishers, is vital for minimizing hazards. Understanding
+                            combustion and practicing fire safety are essential for using fire effectively while
+                            protecting lives and property.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="ct8">
+                        <div class="wrapper">
+                            <img src="image/chemical-change.avif" alt="CC" width="500" height="333">
+                            <div class="text-box">
+                        <h2>Chemical Changes</h2>
+                        <p>A chemical change is a process in which one or more substances are transformed into
+                            entirely new substances with different chemical properties and compositions. During
+                            a chemical change, the bonds between atoms in the original substances, known as
+                            reactants, are broken and rearranged to form new bonds, resulting in the creation of
+                            products. These changes are often irreversible under normal conditions. Common
+                            examples of chemical changes include rusting of iron, burning of wood, cooking food,
+                            and digestion. Indicators of a chemical change include the production of gas
+                            (bubbles), a change in color, the formation of a precipitate (a solid formed in a
+                            liquid solution), the release or absorption of heat, and the emission of light.
+                            Chemical changes are essential in both natural and industrial processes, enabling
+                            everything from the metabolism of food in the body to the creation of
+                            pharmaceuticals, plastics, and fuels. Unlike physical changes, which only alter the
+                            state or appearance of a substance, chemical changes result in the formation of
+                            substances with entirely new chemical identities. Understanding chemical changes
+                            helps scientists predict reactions, design new materials, and develop sustainable
+                            technologies to meet global needs.</p>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="tab-pane" id="physic">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="flex-column nav">
+                            <li class="nav-item"><a href="#dt1" class="nav-link active" data-bs-toggle="tab">Forces and Motion</a></li>
+                            <li class="nav-item"><a href="#dt2" class="nav-link" data-bs-toggle="tab">Simple Machines</a></li>
+                            <li class="nav-item"><a href="#dt3" class="nav-link" data-bs-toggle="tab">Energy and Energy Transfer</a></li>
+                            <li class="nav-item"><a href="#dt4" class="nav-link" data-bs-toggle="tab">Light and Reflection</a></li>
+                            <li class="nav-item"><a href="#dt5" class="nav-link" data-bs-toggle="tab">Sound and Vibrations</a></li>
+                            <li class="nav-item"><a href="#dt6" class="nav-link" data-bs-toggle="tab">Magnetism and Electricity</a></li>
+                            <li class="nav-item"><a href="#dt7" class="nav-link" data-bs-toggle="tab">Gravity and Space</a></li>
+                            <li class="nav-item"><a href="#dt8" class="nav-link" data-bs-toggle="tab">The Solar System</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                    <div class="tab-content">
+
+                        <div class="tab-pane active" id="dt1">
+                            <div class="wrapper">
+                                <img src="image/force.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Forces and Motion</h2>
+                            <p>Forces and motion are fundamental concepts in physics that describe how objects move and interact. A force is any interaction that, when unopposed, will change the motion of an object. Forces can be categorized into different types, such as gravitational, frictional, magnetic, and applied forces. Gravitational force, for instance, is the force of attraction that pulls objects toward the center of the Earth, giving them weight. When forces act on an object, they can either cause it to accelerate, decelerate, or change its direction of motion, depending on the magnitude and direction of the forces involved. Newton's Laws of Motion form the foundation for understanding how forces affect motion. The First Law, often called the Law of Inertia, states that an object at rest will stay at rest, and an object in motion will stay in motion, unless acted upon by an external force. The Second Law describes how the acceleration of an object depends on both the force applied to it and its mass, and it is often expressed by the equation F = ma (Force equals mass times acceleration). The Third Law states that for every action, there is an equal and opposite reaction. These principles help explain everything from the motion of planets to everyday experiences, such as a car accelerating down the road or a ball rolling on the ground. Understanding forces and motion is essential for analyzing the behavior of objects in various fields, including engineering, sports, and space exploration.</p>
+                                </div>
+                    </div>
+                    </div>
+                        <div class="tab-pane" id="dt2">
+                            <div class="wrapper">
+                                <img src="image/machine.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Simple Machines</h2>
+                            <p>Simple machines are fundamental tools that make it easier to perform tasks by reducing the amount of force required to move or lift objects. These machines work by either changing the direction or magnitude of the applied force, allowing humans to perform work more efficiently. There are six types of simple machines: the lever, pulley, inclined plane, wheel and axle, screw, and wedge. Each of these machines works on basic principles of physics and has been used for centuries in various forms. A lever consists of a rigid bar that pivots around a fixed point known as the fulcrum. By applying force at one end, the lever can lift a heavy load at the other, depending on the distance between the effort and the load. A pulley, which is essentially a wheel with a rope running along a groove, changes the direction of the applied force, making tasks like lifting objects easier by allowing force to be applied in a more convenient direction. When multiple pulleys are combined into a system, they can also increase the mechanical advantage, further reducing the force needed to lift heavy loads. The inclined plane, another simple machine, is a slanted surface that helps reduce the effort needed to lift an object by allowing it to be pushed up a slope instead of lifted directly. The wheel and axle is another example where a wheel is attached to a central axle, and turning the wheel applies force to move objects, making tasks like turning a doorknob or operating a vehicle much easier. The screw, which is essentially an inclined plane wrapped around a central shaft, converts rotational motion into linear motion, providing a powerful means of fastening or lifting materials. Finally, the wedge, with its thick end and sharp, thin edge, converts force applied at the broad end into a splitting force at the narrow end, making it useful for cutting, splitting, and fastening. All six types of simple machines work together to reduce the amount of force needed to perform tasks, making them essential tools in construction, transportation, and countless other fields. By understanding how simple machines work, we can appreciate the fundamental principles that underlie much of the technology and tools used in modern society.</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="tab-pane" id="dt3">
+                            <div class="wrapper">
+                                <img src="image/energy.webp" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Energy and Energy Transfer</h2>
+                            <p>Energy is the capacity to do work and exists in various forms, such as kinetic, potential, thermal, chemical, electrical, and nuclear energy. It plays a central role in all physical processes and is essential for powering everything from machines to living organisms. Energy can neither be created nor destroyed, but it can be transferred from one form to another or from one object to another, following the law of conservation of energy. This means that the total energy in an isolated system remains constant, although energy can change forms, like when potential energy is converted into kinetic energy or when energy is transferred as heat. Energy transfer refers to the movement of energy from one place to another. This can occur in several ways, including conduction, convection, and radiation. Conduction is the transfer of heat through a material, from a region of higher temperature to one of lower temperature, by the collision of particles. This is how heat spreads through a metal spoon placed in a hot drink. Convection is the transfer of heat in fluids (liquids or gases) through the movement of warmer, less dense regions rising and cooler, denser regions sinking. This process is responsible for phenomena such as the circulation of air in the atmosphere or the movement of water in oceans. Radiation, on the other hand, is the transfer of energy through electromagnetic waves, such as the heat and light we receive from the Sun. Radiation can travel through a vacuum, which is why we can feel the warmth of the Sun even though space is empty. Energy can also be transferred through mechanical work, such as when a machine uses energy to move or lift an object. In electrical systems, energy transfer occurs as electrical current flows through conductors, delivering energy to devices like lights, motors, and appliances. Additionally, in chemical reactions, energy is often released or absorbed, depending on the nature of the reaction, such as in combustion or photosynthesis. The efficiency of energy transfer can vary, as some energy is often lost as heat or in other forms due to inefficiencies in systems. Understanding energy and how it is transferred is crucial in various fields, from designing energy-efficient systems and renewable energy technologies to understanding the functioning of biological systems, where energy transfer is key to processes like metabolism. The concept of energy transfer underlies most of the processes that occur in both natural and artificial environments, and a deeper understanding of it is essential for solving many of today's technological and environmental challenges.</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="tab-pane" id="dt4">
+                            <div class="wrapper">
+                                <img src="image/light.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Light and Reflection</h2>
+                            <p>Light is a form of electromagnetic radiation that is visible to the human eye. It travels in waves and is essential for vision, allowing us to perceive our surroundings. Light behaves both as a wave and as a particle (photon), a phenomenon known as wave-particle duality. It travels at a speed of approximately 300,000 kilometers per second in a vacuum, and it can pass through various mediums such as air, water, and glass, though its speed may slow down when traveling through these substances. When light encounters an object or surface, its interaction can result in various behaviors, one of the most important of which is reflection. Reflection occurs when light bounces off a surface, rather than being absorbed or transmitted through it. The law of reflection states that the angle at which light strikes a surface (called the incident angle) is equal to the angle at which it reflects off the surface (called the reflected angle). This law is fundamental to understanding how mirrors work, for instance, where light is reflected to form an image. There are two main types of reflection: regular reflection and diffuse reflection. Regular reflection occurs on smooth, shiny surfaces, such as mirrors or calm water, where the reflected rays are parallel, producing a clear and well-defined image. Diffuse reflection happens on rough or irregular surfaces, such as paper or unpolished wood. In this case, the reflected rays scatter in different directions, so the light does not produce a clear image but instead appears as a diffused light. The angle of incidence and the angle of reflection are measured relative to the normal line, which is an imaginary line perpendicular to the surface where the light strikes. This principle applies to all reflective surfaces, whether flat (like mirrors) or curved (like lenses or spherical objects). Reflection is a crucial phenomenon in various optical devices, including telescopes, microscopes, and cameras, as well as everyday items like eyeglasses and rearview mirrors. It also plays a significant role in natural processes such as the way sunlight is reflected by the Moon, allowing us to see its light at night. Understanding light and reflection is essential not only in physics but also in fields like photography, astronomy, and even in the design of various technologies that use light to function.</p>
+                            
+                            </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="dt5">
+                            <div class="wrapper">
+                                <img src="image/sound.webp" alt="" width="500" height="333">
+                                <div class="text-box">
+                                     <h2>Sound and Vibrations</h2>
+                                    <p>Sound is a type of mechanical wave that travels through a medium (such as air, water, or solid materials) and is perceived by the human ear. It is created when an object vibrates, causing the particles in the surrounding medium to move back and forth, creating pressure waves. These waves travel outward from the source of the sound and are detected by our ears, which convert the vibrations into electrical signals that the brain interprets as sound. The process of producing sound begins with vibrations, which are rapid back-and-forth motions of an object. For example, when a guitar string is plucked, it vibrates, causing the surrounding air molecules to vibrate as well. These vibrations spread through the air as compressions (regions where particles are closely packed together) and rarefactions (regions where particles are spread apart), forming a sound wave. The key characteristics of sound include frequency, amplitude, wavelength, and speed. Frequency refers to the number of vibrations (or cycles) per second, and it determines the pitch of the sound. A high-frequency vibration creates a high-pitched sound, such as a whistle, while a low-frequency vibration creates a low-pitched sound, such as a drumbeat. Amplitude is related to the strength of the vibrations and determines the loudness of the sound. Larger amplitudes produce louder sounds, while smaller amplitudes result in quieter sounds. Wavelength is the distance between two consecutive compressions or rarefactions, and it is inversely related to frequency — higher frequencies have shorter wavelengths, while lower frequencies have longer wavelengths. The speed of sound varies depending on the medium through which it travels. For example, sound travels faster in water and even faster in solids than in air because the particles in these substances are more tightly packed, allowing sound waves to move more quickly. Vibrations are not only the foundation of sound but also essential for many other phenomena. In musical instruments, vibrations of strings, air columns, or membranes produce sounds that we can hear. In everyday life, vibrations also occur in things like machinery, electronics, and even the earth (such as during an earthquake). Understanding sound and vibrations is crucial in many fields, such as acoustics, music, engineering, and medicine. For instance, sound waves are used in medical imaging techniques like ultrasound, and understanding how vibrations travel through materials helps engineers design buildings and vehicles to minimize unwanted noise or vibrations. In addition to the perception of sound, vibration itself plays an important role in how we experience different phenomena. For example, the vibrations we feel when we hear loud music or during an earthquake are detected by our sense of touch. These vibrations, if intense enough, can have various effects on materials, structures, and even human health, leading to the study of how vibrations impact both our environments and our bodies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="dt6">
+                            <div class="wrapper">
+                                <img src="image/magnet.jpg" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Magnetism and Electricity</h2>
+                            <p>Magnetism and electricity are closely related forces that are central to many natural phenomena and technologies. Electricity is the flow of electric charge, typically carried by electrons in a conductor, and can manifest as either direct current (DC) or alternating current (AC), depending on the direction of the flow. Electric current is generated through various means, such as the movement of magnetic fields or the conversion of chemical energy in batteries. Magnetism, on the other hand, is produced by moving electric charges, particularly the movement of electrons within atoms. This creates magnetic fields, which exert forces on other magnetic materials and moving charges. Magnetic fields have both strength and direction, and they are responsible for the behavior of magnets, such as attraction and repulsion between poles. The relationship between electricity and magnetism is described by the principles of electromagnetism, which show that electric currents can produce magnetic fields, and changing magnetic fields can induce electric currents. This interaction is harnessed in devices such as electric motors, transformers, and generators, which are fundamental to modern technology. The study of magnetism and electricity forms the basis for much of electrical engineering and is essential for powering homes, driving motors, enabling communication through electromagnetic waves, and even in medical technologies like MRI.</p>
+                        </div>
+                    </div>
+                        </div>
+                        <div class="tab-pane" id="dt7">
+                            <div class="wrapper">
+                                <img src="image/space.png" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>Gravity and Space</h2>
+                            <p>Gravity and space are intimately connected, shaping the behavior of everything from the smallest particles to the largest galaxies. Gravity is a force of attraction that pulls objects toward one another, with its strength determined by the masses of the objects and the distance between them. This force keeps planets in orbit around stars, moons around planets, and governs the motion of objects on Earth. It is responsible for the phenomenon of weight, as gravity pulls objects toward the center of the Earth. Space, or outer space, is the vast, seemingly infinite expanse beyond Earth's atmosphere, where gravity continues to play a dominant role. In space, gravity governs the motion of celestial bodies, keeping planets in orbit, causing the formation of stars, and even shaping the structure of the universe. In addition to gravity's pull, space-time, as described by Einstein's theory of relativity, shows how gravity bends the fabric of space and time, causing objects to follow curved paths in the presence of large masses. The study of gravity and space has allowed us to understand phenomena like black holes, where gravity is so intense that nothing, not even light, can escape, and it has driven advances in space exploration, revealing more about the universe and our place in it.</p> 
+                          </div>
+                    </div>
+                        </div>
+                        <div class="tab-pane" id="dt8">
+                            <div class="wrapper">
+                                <img src="image/solar.webp" alt="" width="500" height="333">
+                                <div class="text-box">
+                            <h2>The Solar System</h2>
+                            <p>The solar system is a collection of celestial bodies, including the Sun, planets, moons, asteroids, comets, and other objects, all bound together by gravity. At the center of the solar system lies the Sun, a star that provides the necessary energy and heat for life on Earth. The planets, eight in total, orbit the Sun in elliptical paths, with Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune being the main planets, each with its own unique characteristics. The four inner planets—Mercury, Venus, Earth, and Mars—are rocky, while the outer planets—Jupiter, Saturn, Uranus, and Neptune—are gas giants or ice giants, with thick atmospheres and multiple moons. The solar system also contains the asteroid belt between Mars and Jupiter, which consists of small rocky bodies, and the Kuiper Belt and Oort Cloud, regions beyond Neptune that are home to comets and other icy bodies. The gravitational pull of the Sun keeps all these objects in orbit, maintaining the structure and balance of the solar system. The study of the solar system not only helps us understand our own planet but also provides insights into the formation of planets, stars, and other solar systems across the galaxy.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="stem">
+        <div class="row mt-4" >
+                <!-- First Activity: State of Matter -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">State of Matter</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/IlIEm488wxY?si=N8F5kQkwpbkm-S85" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Balloon</li>
+                                <li>Vinegar</li>
+                                <li>Baking soda</li>
+                                <li>A clear plastic bottle</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Fill a bottle with 1/3 vinegar</li>
+                                <li>Add baking soda in a bottle.</li>
+                                <li>Attach the balloon to the bottle's neck without spilling the baking soda inside.</li>
+                                <li>Lift the balloon to allow the baking soda to fall into the vinegar.</li>
+                                <li>Observe the chemical reaction as gas CO₂ inflates the balloon, representing a gas state.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Second Activity: Acids and Bases -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Acids and Bases</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Uy_y3ml1VeU?si=GZHpcUjkelIzOQ_q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Baking Soda</li>
+                                <li>Vinegar</li>
+                                <li>Balloon</li>
+                                <li>Clear plastic bottle</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Fill a balloon with 1-2 tablespoons of baking soda using a funnel or spoon.</li>
+                                <li>Pour about 1/3 cup of vinegar into a clear plastic bottle.</li>
+                                <li>Attach the balloon to the bottle's neck, keeping the baking soda inside the balloon.</li>
+                                <li>Lift the balloon, letting the baking soda fall into the vinegar. Observe the reaction that produces carbon dioxide gas, inflating the balloon.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Third Activity: Chemical Reactions -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Chemical Reactions</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nvQnQ2OjmRU?si=5asXQ0PMRF1bY_3S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Baking Soda</li>
+                                <li>Vinegar</li>
+                                <li>Plastic bottle or container</li>
+                                <li>Balloon (for capturing gas)</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Set up a tray to catch any overflowing liquids or fizz. Place the plastic bottle or container on the tray.</li>
+                                <li>Use a measuring spoon to add about 1 tablespoon of baking soda into the bottle. You can also add a small amount of glitter for a visual effect (optional).</li>
+                                <li>Pour vinegar into a separate container or squeeze bottle. You’ll need about 1/4 cup for this experiment, but you can adjust based on how much reaction you want to see.</li>
+                                <li>If you want to capture the gas, stretch a balloon over the bottle’s opening before adding vinegar. As the reaction occurs, the balloon will inflate with carbon dioxide.</li>
+                                <li>The fizzing indicates that a chemical reaction is happening. The vinegar and baking soda produce carbon dioxide (CO₂), water (H₂O), and sodium acetate.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row mt-5">
+                <!-- Fourth Activity: Cotton Ball Launcher -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Cotton Ball Launcher</h2>
+                    <div class="row">
+                        <iframe width="100%" height="215" src="https://www.youtube.com/embed/ZWJfIdZOpP4?si=TNbwR3yVBWzo6Wth" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Plastic bottle</li>
+                                <li>Straws</li>
+                                <li>Cotton balls</li>
+                                <li>Rubber band</li>
+                                <li>Scissors</li>
+                                <li>Tape</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Prepare the Bottle</li>
+                                <li>Insert the Straw</li>
+                                <li>Secure with Tape</li>
+                                <li>Connect the Generator</li>
+                                <li>Setup the Heating Source</li>
+                                <li>Light the LED Bulb</li>
+                                <li>Testing and Adjustments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Fifth Activity: Steam Engine -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Power Generator</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/L3XAFSMdVWU?si=fpS-C31lLsplMJ2b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>A small plastic bottle (for the boiler)</li>
+                                <li>A metal can (such as a soda can)</li>
+                                <li>A heat source (like a candle)</li>
+                                <li>Water</li>
+                                <li>Straw or tubing (for steam passage)</li>
+                                <li>Scissors</li>
+                                <li>Tape</li>
+                                <li>A small piece of cloth (for insulation)</li>
+                                <li>Optional: paint or markers for decoration</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Construct the Base</li>
+                                <li>Build the Boiler</li>
+                                <li>Assembly of Components</li>
+                                <li>Connect the Generator</li>
+                                <li>Setup the Heating Source</li>
+                                <li>Light the LED Bulb</li>
+                                <li>Testing and Adjustments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Sixth Activity: Steam Engine (Different Video) -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Recycle Sorting Machine</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Th6GQiSHfKk?si=PFR-OvlXKMU4qzXT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Cardboard or Plastic Boxes</li>
+                                <li>Scissors or Utility Knife</li>
+                                <li>Hot Glue Gun or Strong Adhesive</li>
+                                <li>Markers or Labels</li>
+                                <li>Small Containers</li>
+                                <li>Wheels or Base</li>
+                                <li>Tape</li>
+                                <li>Assorted Recyclable Items</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Design the Layout</li>
+                                <li>Prepare the Base</li>
+                                <li>Create Sorting Compartments</li>
+                                <li>Assemble the Compartments</li>
+                                <li>Create a Feeding Mechanism</li>
+                                <li>Label Each Compartment</li>
+                                <li>Test the Sorting Machine</li>
+                                <li>Adjust as Necessary</li>
+                                <li>Make It Mobile (Optional)</li>
+                                <li>Final Touches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row mt-5">
+                <!-- Seventh Activity: Human Circulatory -->
+                <div class="col-md-4">
+                    <h2 class="stem-title">Human Circulatory</h2>
+                    <div class="row">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/C6GRQlUzRW8?si=AJzASrrojKwsuPGu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Cardboard</li>
+                                <li>Color paper</li>
+                                <li>Glue</li>
+                                <li>Pencil</li>
+                                <li>Marker</li>
+                                <li>Syringe</li>
+                                <li>Clear tubes</li>
+                                <li>Food dye</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Make a human heart out of cardboard</li>
+                                <li>Stick a white paper on it and color the vein and artery</li>
+                                <li>Put the tubes and syringes together</li>
+                                <li>Make red water and blue water using food dye</li>
+                                <li>Stick blue syringe on the vein side</li>
+                                <li>Stick the red on the artery side</li>
+                                <li>Stick an empty syringe</li>
+                                <li>Now you have a human heart model</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <h2 class="stem-title">Classification of Living Organisms</h2>
+                    <div class="row">
+                        <iframe width="100%" height="215" src="https://www.youtube.com/embed/VMToTOvGKsc?si=JD-_lxtf1ZimLrOQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Cardboard</li>
+                                <li>Color paper</li>
+                                <li>Glue</li>
+                                <li>Pencil</li>
+                                <li>Marker</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>You need to cut paper into a circle</li>
+                                <li>Next divide it into 2 parts "living things" and "non-living"</li>
+                                <li>Glue green color paper on the "living things" side and yellow on the "non-living things" side</li>
+                                <li>Need animals, humans, and trees to put in the "living things" side</li>
+                                <li>Need ball, toys, table, pencils to put in the "non-living things" side</li>
+                                <li>Glue those things on their own sides</li>
+                                <li>And lastly label them</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <h2 class="stem-title">Cell Structure</h2>
+                    <div class="row">
+                        <iframe width="100%" height="215" src="https://www.youtube.com/embed/R80ql9xkBKY?si=SoyuEEgQOvPWXXgl" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="stem-act">
+                            <h4>Things needed for this STEM activity</h4>
+                            <ul class="need-list" style="list-style-type:square;">
+                                <li>Cardboard</li>
+                                <li>Clear Tube</li>
+                                <li>Color paper</li>
+                                <li>Glue/hot glue gun</li>
+                                <li>Syringe</li>
+                                <li>Food coloring</li>
+                            </ul>
+                        </div>
+                        <div class="stem-act mt-3">
+                            <h4>Step by step</h4>
+                            <ul class="step-list" style="list-style-type: square;">
+                                <li>Cut out organs out of cardboard and put color paper on them</li>
+                                <li>Stick the organs on the big cardboard</li>
+                                <li>Next label the organs</li>
+                                <li>After that you need to glue the clear tube on the cardboard as the video has shown</li>
+                                <li>You need to mix food coloring and water and put it in the syringe</li>
+                                <li>Now you have a digestive system working model and you can test it.</li>
+                            </ul>
+                        </div>
+                    </div>       
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <section id="interactive">
+        <h2>Interactive Learning</h2>
+        <div class="interactive-content">
+            <div class="interactive-box">
+                <h3>Take a Quiz</h3>
+                <p style="text-align: center;">Let's Test Your Knowledge!</p>
+                <button onclick="location.href='Y8quiz.html'">Start Quiz</button>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+    <!--Footer start-->
+    <footer class="footer">
+        <div class="container" style="height: 280px;">
+          <div class="row">
+            <div class="footer-col">
+              <h4><b>About This Website</b></h4>
+              <img src="image/logo.png" alt="logo" height="90px" width="80px">
+              <p><b>Our platform offers clear explanations of fundamental science concepts, coupled with exciting hands-on STEM activities that bring theory to life.</b></p>
+            </div>
+            <div class="footer-col">
+              <h4><b>Junior Science Explorer</b></h4>
+              <ul>
+                <li><a href="#index">Home</a></li>
+                <li><a onclick="location.href='about-us.html'">About Us</a></li>
+                <li><a onclick="location.href='contact-us.html'">Contact Us</a></li>
+                <li><a onclick="location.href='Y7.html'">Year 7</a></li>
+                <li><a onclick="location.href='Y8.html'">Year 8</a></li>
+                <li><a onclick="location.href='Y9.html'">Year 9</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4><b>Quick Link</b></h4>
+              <ul>
+                <li><a href="#stem">What is STEM?</a></li>
+                <li><a href="#benefits">Benefits of Studying STEM</a></li>
+                <li><a href="#benefits">Our Sevices</a></li>
+                <li><a href="#testimonal">Testimonal</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4><b>Follow Us</b></h4>
+              <div class="social-link-list">
+                <a href="https://www.tiktok.com/@junior.science.ex?_t=8s4yoUQHvcH&_r=1" class="social-link"><i class="bi bi-tiktok"></i></a>
+                <a href="https://t.me/Junior_Science_Explorer" class="social-link"><i class="bi bi-telegram"></i></a>
+                <a href="https://discord.gg/eSRGZqEk" class="social-link"><i class="bi bi-discord"></i></a>
+              </div>
+             <ul>
+                <li><a href="reference.html">Reference</a></li>
+             </ul>
+            </div>
+            <p style="text-align: center;">&copy; 2024-2025 Junior Explorers. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
